@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Logo } from './img/assets/logo_3.svg';
+import { ReactComponent as Logo } from './assets/img/logo_3.svg';
 
 
 function Header() {

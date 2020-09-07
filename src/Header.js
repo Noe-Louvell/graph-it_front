@@ -10,20 +10,12 @@ function Header() {
           <div>
           <Nav defaultActiveKey="/home" as="ul">
               <Nav.Item as="li">
-              <Nav.Link href="/home">Equipe</Nav.Link>
-          </Nav.Item>
-          <Nav.Item as="li">
-              <Nav.Link eventKey="link-1">Article</Nav.Link>
+                <Nav.Link href="/home">Equipe</Nav.Link>
+                <Nav.Link eventKey="link-1">Article</Nav.Link>
+                <Nav.Link eventKey="disabled"><Logo/></Nav.Link>
+                <Nav.Link eventKey="link-1">Réalisations</Nav.Link>
+                <Nav.Link eventKey="link-1">Nous contacter</Nav.Link>
               </Nav.Item>
-          <Nav.Item as="li">
-              <Nav.Link eventKey="link-2"><Logo/></Nav.Link>
-          </Nav.Item>
-          <Nav.Item as="li">
-              <Nav.Link eventKey="link-1">Réalisations</Nav.Link>
-              </Nav.Item>
-              <Nav.Item as="li">
-                  <Nav.Link eventKey="link-1">Nous contacter</Nav.Link>
-                  </Nav.Item>
           </Nav>
           </div>
         );

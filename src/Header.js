@@ -12,9 +12,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './Header.css';
 import Equipe from './pages/Equipe'
 
+
 function Header() {
 
   return (
+
           <div className="Header">
 
             <div className="Menu">
@@ -31,18 +33,14 @@ function Header() {
                     <Link to="/Articles">Nos Services</Link>
                   </Nav.Link>
 
-<<<<<<< HEAD
-            <Nav.Item as="li">
-              <Nav.Link>
-                <Link to="/"><Logo/></Link>
-              </Nav.Link>
-=======
                 </Nav.Item>
->>>>>>> 673a942c9a21a18ec5d6090e34b216526194457e
 
                 <Nav.Item as="li">
                   <Nav.Link>
                     <Link to="/"><Logo className="logo"/></Link>
+                    <Link to="/">
+
+                    </Link>
                   </Nav.Link>
 
                 </Nav.Item>
@@ -65,43 +63,8 @@ function Header() {
 
 
 
-<<<<<<< HEAD
-          <Switch>
-            <Route path="/Equipe">
-              <Equipe />
-            </Route>
-            <Route path="/Articles">
-
-            </Route>
-            <Route path="/">
-
-            </Route>
-            <Route path="/Réalisations">
-
-            </Route>
-            <Route path="/Contact">
-
-            </Route>
-          </Switch>
-
-
-
-
-        </div>
-
-
-
-
-
-
-      </Router>
-
-
-    </div>
-=======
             </div>
           </div>
->>>>>>> 673a942c9a21a18ec5d6090e34b216526194457e
   );
 }
 

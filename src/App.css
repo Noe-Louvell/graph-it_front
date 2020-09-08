@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.Header{
+    top: 0;
+    min-height: 77px;
+    background-color: #fff;
+    box-shadow: 0 7px 6px 0 rgba(0,0,0,.1);
+}

@@ -17,25 +17,25 @@ function Header() {
   return (
     <div className="header">
       <Router>
-        <div>
+        <div className="Menu">
           <Nav defaultActiveKey="/" as="ul" className="justify-content-center">
             <Nav.Item as="li">
-              <Nav.Link>
-                <Link to="/Equipe">Equipe</Link>
+              <Nav.Link className="MenuText">
+                <Link to="/Equipe">L'Equipe</Link>
               </Nav.Link>
 
             </Nav.Item>
 
             <Nav.Item as="li" defaultActiveKey="/articles">
               <Nav.Link>
-                <Link to="/Articles">Articles</Link>
+                <Link to="/Articles">Nos Services</Link>
               </Nav.Link>
 
             </Nav.Item>
 
             <Nav.Item as="li">
               <Nav.Link>
-                <Link to="/"><Logo /></Link>
+                <Link to="/"><Logo className="logo"/></Link>
               </Nav.Link>
 
             </Nav.Item>
@@ -64,16 +64,16 @@ function Header() {
               <Equipe />
             </Route>
             <Route path="/Articles">
-              
+
             </Route>
             <Route path="/">
 
             </Route>
             <Route path="/Réalisations">
-            
+
             </Route>
             <Route path="/Contact">
-              
+
             </Route>
           </Switch>
 

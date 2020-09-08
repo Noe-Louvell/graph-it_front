@@ -15,82 +15,51 @@ import Equipe from './pages/Equipe'
 function Header() {
 
   return (
-    <div className="header">
-      <Router>
-        <div className="Menu">
-          <Nav defaultActiveKey="/" as="ul" className="justify-content-center">
-            <Nav.Item as="li">
-              <Nav.Link className="MenuText">
-                <Link to="/Equipe">L'Equipe</Link>
-              </Nav.Link>
+          <div className="Header">
 
-            </Nav.Item>
+            <div className="Menu">
+              <Nav defaultActiveKey="/" as="ul" className="justify-content-center">
+                <Nav.Item as="li">
+                  <Nav.Link className="MenuText">
+                    <Link to="/Equipe">L'Equipe</Link>
+                  </Nav.Link>
 
-            <Nav.Item as="li" defaultActiveKey="/articles">
-              <Nav.Link>
-                <Link to="/Articles">Nos Services</Link>
-              </Nav.Link>
+                </Nav.Item>
 
-            </Nav.Item>
+                <Nav.Item as="li" defaultActiveKey="/articles">
+                  <Nav.Link>
+                    <Link to="/Articles">Nos Services</Link>
+                  </Nav.Link>
 
-            <Nav.Item as="li">
-              <Nav.Link>
-                <Link to="/"><Logo className="logo"/></Link>
-              </Nav.Link>
+                </Nav.Item>
 
-            </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <Link to="/"><Logo className="logo"/></Link>
+                  </Nav.Link>
 
-            <Nav.Item as="li">
-              <Nav.Link>
-                <Link to="/Réalisations">Réalisations</Link>
-              </Nav.Link>
+                </Nav.Item>
 
-            </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <Link to="/Réalisations">Réalisations</Link>
+                  </Nav.Link>
 
-            <Nav.Item as="li">
-              <Nav.Link>
-                <Link to="/Contact">Nous contacter</Link>
-              </Nav.Link>
+                </Nav.Item>
 
-            </Nav.Item>
-          </Nav>
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <Link to="/Contact">Nous contacter</Link>
+                  </Nav.Link>
 
-
-
-
-
-          <Switch>
-            <Route path="/Equipe">
-              <Equipe />
-            </Route>
-            <Route path="/Articles">
-
-            </Route>
-            <Route path="/">
-
-            </Route>
-            <Route path="/Réalisations">
-
-            </Route>
-            <Route path="/Contact">
-
-            </Route>
-          </Switch>
+                </Nav.Item>
+              </Nav>
 
 
 
 
-        </div>
-
-
-
-
-
-
-      </Router>
-
-
-    </div>
+            </div>
+          </div>
   );
 }
 

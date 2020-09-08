@@ -35,7 +35,7 @@ function Header() {
 
             <Nav.Item as="li">
               <Nav.Link>
-                <Link to="/"><Logo /></Link>
+                <Link to="/"><Logo/></Link>
               </Nav.Link>
 
             </Nav.Item>
@@ -64,16 +64,16 @@ function Header() {
               <Equipe />
             </Route>
             <Route path="/Articles">
-              
+
             </Route>
             <Route path="/">
 
             </Route>
             <Route path="/Réalisations">
-            
+
             </Route>
             <Route path="/Contact">
-              
+
             </Route>
           </Switch>
 

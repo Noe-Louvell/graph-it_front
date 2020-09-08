@@ -1,0 +1,11 @@
+.Titre{
+  font-size: 50px;
+  color: white;
+}
+
+#EquipePage{
+  background-color: #1F6639;
+}
+.Equipe{
+  background: linear-gradient(75deg, c, #2CDA6C) center top no-repeat;
+}

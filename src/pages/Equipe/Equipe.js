@@ -1,12 +1,11 @@
 import React from 'react';
+import './Equipe.css'
 
-
-function App() {
+function Equipe() {
   return (
-    <div className="Equipe">
-    <h1>equipe</h1>
-    </div>
+    <main id="EquipePage">
+    </main>
   );
 }
 
-export default App;
+export default Equipe;

@@ -11,6 +11,7 @@
 
 .justify-content-center{
   align-items: baseline;
+  justify-content: space-evenly!important;
 }
 
 a{
@@ -18,12 +19,13 @@ a{
   font-size: 120%
 }
 
+a:hover{
+  color: #2CDA6C;
+}
+
 .logo{
-  font-family: ccmonstermashworn, sans-serif;
 
-  font-weight: 500;
-
-  font-style: normal;
+  width: 100%
 }
 
 .MenuText{

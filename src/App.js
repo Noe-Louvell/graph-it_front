@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Header from "./Header"
+import Header from './components/Header/Header';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,10 +9,10 @@ import {
 
 } from "react-router-dom";
 import Equipe from './pages/Equipe'
-import { ReactComponent as Logo } from './assets/img/logo_3.svg';
+
 import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './Header.css';
+import './components/Header/Header.css';
 
 function App() {
   return (

@@ -1,18 +1,23 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+// Import Navigation
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 
 } from "react-router-dom";
-import Equipe from './pages/Equipe'
 
-import Nav from 'react-bootstrap/Nav'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// Import des components du site
 import './components/Header/Header.css';
+import Header from './components/Header/Header';
+// Import des pages du site
+import Equipe from '../src/pages/Equipe/Equipe'
+import Article from '../src/pages/Article/Article'
+
+
 
 function App() {
   return (
@@ -24,15 +29,18 @@ function App() {
 
 
     <Switch>
+    <Route path="/Accueil">
+
+    </Route>
+
       <Route path="/Equipe">
         <Equipe />
       </Route>
+
       <Route path="/Articles">
-
+        <Article />
       </Route>
-      <Route path="/">
 
-      </Route>
       <Route path="/Réalisations">
 
       </Route>

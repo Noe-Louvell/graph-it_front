@@ -1,16 +1,9 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-
-} from "react-router-dom";
+import { NavLink  } from "react-router-dom";
 
 import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Header.css';
-import Equipe from '../../pages/Equipe'
 import logo_1 from '../../assets/img/logo_1.png'
 
 
@@ -18,60 +11,53 @@ function Header() {
 
   return (
 
-          <div className="Header">
+          <div id="Header"className="fixed-top">
 
             <div className="Menu">
-              <Nav defaultActiveKey="/" as="ul" className="justify-content-center">
+              <Nav as="ul" className="justify-content-center">
 
-              <Nav.Item as="li" defaultActiveKey="/articles">
+              <Nav.Item as="li">
                 <Nav.Link>
-                  <Link to="/">Accueil</Link>
+                  <NavLink  to="/" >Accueil</NavLink >
                 </Nav.Link>
-
               </Nav.Item>
+
                 <Nav.Item as="li">
                   <Nav.Link className="MenuText">
-                    <Link to="/Equipe">L'Equipe</Link>
+                    <NavLink  to="/Equipe">L'Equipe</NavLink >
                   </Nav.Link>
-
                 </Nav.Item>
 
                 <Nav.Item as="li" defaultActiveKey="/articles">
                   <Nav.Link>
-                    <Link to="/Services">Nos Services</Link>
+                    <NavLink  to="/Services">Nos Services</NavLink >
                   </Nav.Link>
-
                 </Nav.Item>
 
                 <Nav.Item as="li">
                   <Nav.Link>
-
-                    <Link to="/">
+                    <NavLink  to="/">
                     <img className="logo" src={logo_1} alt="Logo" />
-                    </Link>
+                    </NavLink >
                   </Nav.Link>
-
                 </Nav.Item>
 
                 <Nav.Item as="li">
                   <Nav.Link>
-                    <Link to="/Réalisations">Réalisations</Link>
+                    <NavLink  to="/Réalisations">Réalisations</NavLink >
                   </Nav.Link>
-
                 </Nav.Item>
 
                 <Nav.Item as="li">
                   <Nav.Link>
-                    <Link to="/Articles">Articles</Link>
+                    <NavLink  to="/Articles">Articles</NavLink >
                   </Nav.Link>
-
                 </Nav.Item>
 
                 <Nav.Item as="li">
                   <Nav.Link>
-                    <Link to="/Contact">Nous contacter</Link>
+                    <NavLink  to="/Contact">Nous contacter</NavLink>
                   </Nav.Link>
-
                 </Nav.Item>
               </Nav>
 

@@ -1,9 +1,16 @@
 .header {
-    background-color: 'white-light';
+
     display: flex;
     flex: 1;
   }
 
+  #Header{
+      top: 0;
+      min-height: 77px;
+      background-color: #fff;
+      box-shadow: 0 7px 6px 0 rgba(0,0,0,.1);
+
+  }
   .Menu{
     flex: 1;
 
@@ -16,7 +23,7 @@
 
 a{
   color: black;
-  font-size: 120%
+  font-size: 110%
 }
 
 a:hover{
@@ -25,9 +32,14 @@ a:hover{
 
 .logo{
 
-  width: 100%
+  width: 80%
 }
 
 .MenuText{
   margin-top: 15px
+}
+
+.active{
+  color: #2CDA6C
+
 }

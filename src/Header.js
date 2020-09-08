@@ -15,50 +15,57 @@ import Equipe from './pages/Equipe'
 function Header() {
 
   return (
-    <div className="header">
-      <Router>
-        <div>
-          <Nav defaultActiveKey="/" as="ul" className="justify-content-center">
-            <Nav.Item as="li">
-              <Nav.Link>
-                <Link to="/Equipe">Equipe</Link>
-              </Nav.Link>
+          <div className="Header">
 
-            </Nav.Item>
+            <div className="Menu">
+              <Nav defaultActiveKey="/" as="ul" className="justify-content-center">
+                <Nav.Item as="li">
+                  <Nav.Link className="MenuText">
+                    <Link to="/Equipe">L'Equipe</Link>
+                  </Nav.Link>
 
-            <Nav.Item as="li" defaultActiveKey="/articles">
-              <Nav.Link>
-                <Link to="/Articles">Articles</Link>
-              </Nav.Link>
+                </Nav.Item>
 
-            </Nav.Item>
+                <Nav.Item as="li" defaultActiveKey="/articles">
+                  <Nav.Link>
+                    <Link to="/Articles">Nos Services</Link>
+                  </Nav.Link>
 
+<<<<<<< HEAD
             <Nav.Item as="li">
               <Nav.Link>
                 <Link to="/"><Logo/></Link>
               </Nav.Link>
+=======
+                </Nav.Item>
+>>>>>>> 673a942c9a21a18ec5d6090e34b216526194457e
 
-            </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <Link to="/"><Logo className="logo"/></Link>
+                  </Nav.Link>
 
-            <Nav.Item as="li">
-              <Nav.Link>
-                <Link to="/Réalisations">Réalisations</Link>
-              </Nav.Link>
+                </Nav.Item>
 
-            </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <Link to="/Réalisations">Réalisations</Link>
+                  </Nav.Link>
 
-            <Nav.Item as="li">
-              <Nav.Link>
-                <Link to="/Contact">Nous contacter</Link>
-              </Nav.Link>
+                </Nav.Item>
 
-            </Nav.Item>
-          </Nav>
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <Link to="/Contact">Nous contacter</Link>
+                  </Nav.Link>
+
+                </Nav.Item>
+              </Nav>
 
 
 
 
-
+<<<<<<< HEAD
           <Switch>
             <Route path="/Equipe">
               <Equipe />
@@ -91,6 +98,10 @@ function Header() {
 
 
     </div>
+=======
+            </div>
+          </div>
+>>>>>>> 673a942c9a21a18ec5d6090e34b216526194457e
   );
 }
 

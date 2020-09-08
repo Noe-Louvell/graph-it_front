@@ -1,11 +1,31 @@
 import React from 'react';
 import './Equipe.css'
-import Footer from '../../assets/img/fond_footer-couleur.svg'
+import {ReactComponent as Footer} from '../../assets/img/fond_footer-couleur.svg'
 
 function Equipe() {
   return (
-    <main id="EquipePage">
-    </main>
+    <div>
+
+
+
+
+
+
+
+
+      <div className="row">
+        <div className="boxEquipe">
+          <div className="personne">
+            <h2>Test</h2>
+          </div>
+
+        </div >
+
+      </div>
+    </div>
+
+
+
   );
 }
 

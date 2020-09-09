@@ -1,8 +1,44 @@
 .App {
   text-align: center;
+
+
 }
 
+.contenair{
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 30vh;
+}
 
+.row{
+  display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.zoneText{
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center!important;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+.Background{
+    background-image: url("./assets/img/bg-page2.png");
+    background-position: top;
+    background-repeat: no-repeat;
+}
 
 .App-logo {
   height: 40vmin;

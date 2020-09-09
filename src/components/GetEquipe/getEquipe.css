@@ -1,10 +1,32 @@
 .CardEquipe{
   display: flex;
+  background-color: #fff;
+  margin:5%;
+  width: 15%;
+  flex-direction: column;
+  box-shadow: 0 7px 6px 0 rgba(0,0,0,.1);
+
+  border-radius: 15px;
+}
+.CardText{
+  display: flex;
+  justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .Nom{
   margin-right: 5px;
+  color: black;
+
+}
+.Prenom{
+  color: black;
+}
+
+.Formation{
+  color: black;
+  text-align: center;
 }
 
 .boxPersonne{
@@ -14,6 +36,8 @@
 }
 
 .Avatar{
+  margin-top: 5px;
+  justify-content: center;
   width: 150px;
   height:150px;
   border-radius: 100px;

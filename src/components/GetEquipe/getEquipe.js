@@ -40,9 +40,19 @@ function GetEquipe() {
            ViewContent.push(
 
                    <div className="CardEquipe">
-                       <p className="Nom"> {data[i].Nom}</p>
-                       <p className="Prenom"> {data[i].Prenom}</p>
-                       <img src={'http://graph-it.cesi.group' + data[i].Photo.url}  className="Avatar" alt="Avatar"/>
+                    <div className="CardImg">
+                      <img src={'http://graph-it.cesi.group' + data[i].Photo.url}  className="Avatar" alt="Avatar"/>
+                    </div>
+
+                      <div className="CardText">
+                        <p className="Nom"> {data[i].Nom}</p>
+                        <p className="Prenom"> {data[i].Prenom}</p>
+
+                      </div>
+                        <p className="Formation">{data[i].Formation}</p>
+
+
+
                    </div>
 
            )

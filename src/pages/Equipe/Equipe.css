@@ -84,6 +84,20 @@ p{
   text-align: left;
 }
 
-.logoCesi{
+.SéparationBG{
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  transition: height 1s ease-in-out;
+}
 
+.SéparationBG:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    background-color: #fff;
+    width: 100vw;
+    height: 70px;
+    -webkit-clip-path: polygon(0 100%,0 0,100% 0,0 100%);
+    clip-path: polygon(0 100%,0 0,100% 0,0 100%);
 }

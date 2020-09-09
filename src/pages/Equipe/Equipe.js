@@ -1,6 +1,5 @@
 import React from 'react';
 import './Equipe.css'
-import {ReactComponent as Footer} from '../../assets/img/fond_footer-couleur.svg'
 import GetEquipe from '../../components/GetEquipe/getEquipe'
 
 function Equipe() {
@@ -32,13 +31,13 @@ function Equipe() {
       </div>
       <div className="descriptionImg">
         <div className="logoCesi">
-          <img src="../../assets/img/CESI.png" />
+          <img src="../../assets/img/CESI.png" alt="Logo du CESI"/>
         </div>
       </div>
     </div>
   </div>
 
-  <section className="Background HeaderPage">
+  <section className="Background HeaderPage SéparationBG">
     <div className="contenair">
       <div className="row">
         <div className="zoneText">

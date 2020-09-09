@@ -13,9 +13,12 @@ import {
 // Import des components du site
 import './components/Header/Header.css';
 import Header from './components/Header/Header';
+
 // Import des pages du site
 import Equipe from '../src/pages/Equipe/Equipe'
 import Article from '../src/pages/Article/Article'
+
+import { ReactComponent as Fond } from './assets/img/fond_footer-couleur.svg';
 
 
 
@@ -23,9 +26,21 @@ function App() {
   return (
     <div className="App">
 
+
     <Router>
 
     <Header/>
+
+    <section className="Background HeaderPage">
+    <div className="contenair">
+      <div className="row">
+        <div className="zoneText">
+          <h1>Graph-it</h1>
+          <h2>Agence de développement web et d'applications sur mobiles</h2>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
     <Switch>

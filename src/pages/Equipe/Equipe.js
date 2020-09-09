@@ -19,67 +19,22 @@ function Equipe() {
     </div>
   </section>
 
+
   <div className="contenair">
     <div className="row description">
       <div className="descriptionText">
-        <h1>Le cesi</h1>
-        <p>statut étudiant à cesi</p>
-
+        <h1 className="descriptionTitre">Lorem ipsum as title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus tempus vestibulum. Donec in lobortis tellus. Sed sed pretium risus, sit amet tempor nisl. Sed sit amet lacus nulla. Nam est nibh, feugiat interdum nibh in, placerat ullamcorper dui. Vivamus nunc turpis, mollis sed hendrerit ut, faucibus vel sem. Pellentesque in pellentesque magna. Aenean laoreet</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus tempus vestibulum. Donec in lobortis tellus. Sed sed pretium risus, sit amet tempor nisl. Sed sit amet lacus nulla. Nam est nibh, feugiat interdum nibh in, placerat ullamcorper dui. Vivamus nunc turpis, mollis sed hendrerit ut, faucibus vel sem. Pellentesque in pellentesque magna. Aenean laoreet</p>
       </div>
       <div className="descriptionImg">
-        <h1>logo cesi.png</h1>
+        <div className="logoCesi">
+          <img src="../../assets/img/CESI.png" >
+        </div>
       </div>
     </div>
   </div>
-  <div className="contenair">
-    <div className="row description">
-      <div className="descriptionText">
-        <h1>Le cesi</h1>
-        <p>statut étudiant à cesi</p>
 
-      </div>
-      <div className="descriptionImg">
-        <h1>logo cesi.png</h1>
-      </div>
-    </div>
-  </div>
-  <div className="contenair">
-    <div className="row description">
-      <div className="descriptionText">
-        <h1>Le cesi</h1>
-        <p>statut étudiant à cesi</p>
-
-      </div>
-      <div className="descriptionImg">
-        <h1>logo cesi.png</h1>
-      </div>
-    </div>
-  </div>
-  <div className="contenair">
-    <div className="row description">
-      <div className="descriptionText">
-        <h1>Le cesi</h1>
-        <p>statut étudiant à cesi</p>
-
-      </div>
-      <div className="descriptionImg">
-        <h1>logo cesi.png</h1>
-      </div>
-    </div>
-  </div>
-  <div className="contenair">
-    <div className="row description">
-      <div className="descriptionText">
-        <h1>Le cesi</h1>
-        <p>statut étudiant à cesi</p>
-
-      </div>
-      <div className="descriptionImg">
-        <h1>logo cesi.png</h1>
-      </div>
-    </div>
-  </div>
-  
 
 </main>
 

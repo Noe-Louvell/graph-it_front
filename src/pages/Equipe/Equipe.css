@@ -19,6 +19,7 @@ section{
     background-repeat: no-repeat;
 }
 
+
 .contenair{
   width: 100%;
     padding-right: 15px;
@@ -58,8 +59,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 58.3333333333%;
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 12%;
+  padding-right: 3%;
+  padding-left: 15%;
 }
 
 .descriptionImg{
@@ -69,4 +70,20 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     padding-right: 10%;
     padding-left: 15px;
+}
+
+.descriptionTitre{
+  background: -webkit-linear-gradient(.9turn,#2CDA6C 10%,#C5FFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: initial;
+  margin-bottom: 3%;
+}
+
+p{
+  text-align: left;
+}
+
+.logoCesi{
+  
 }

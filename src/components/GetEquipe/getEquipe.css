@@ -1,0 +1,20 @@
+.CardEquipe{
+  display: flex;
+  flex-direction: row;
+}
+
+.Nom{
+  margin-right: 5px;
+}
+
+.boxPersonne{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Avatar{
+  width: 150px;
+  height:150px;
+  border-radius: 100px;
+}

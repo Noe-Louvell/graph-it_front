@@ -3,6 +3,25 @@ section{
 
 }
 
+.bg-page4 {
+
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 20vh;
+
+}
+
+hr {
+  width: 100px;
+  margin-left: center;
+  height: 4px;
+  margin-bottom: .8rem;
+  margin-top: 2rem;
+  border: 0;
+  background-color: white;
+}
+
 
 .HeaderPage{
   display: flex;

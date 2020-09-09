@@ -15,10 +15,17 @@ function Accueil() {
         <div className="zoneText">
           <h1> Graph-it </h1>
           <h2> Agence de développement web et mobile </h2>
+          <hr/>
         </div>
       </div>
+      <image className="bg-page4" src="../../assets/img/bg-page4.png)"/>
     </div>
+
+
+
   </section>
+
+
 
 
   <section className="Nos Services">

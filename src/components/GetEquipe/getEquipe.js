@@ -51,6 +51,8 @@ function GetEquipe() {
                       </div>
                         <p className="Formation">{data[i].Formation}</p>
 
+                        
+
 
 
                    </div>

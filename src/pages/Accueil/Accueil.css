@@ -35,11 +35,13 @@ section{
   padding-top: 100px;
   width: 100%;
   margin: 0, auto;
+
 }
 
 .contenaire > h1, .titre-nosServices {
   font-weight: 300 !important;
   letter-spacing: 1px;
+  color: #081829;
 }
 
 .contenaire > h1, .contenaire > p{
@@ -51,21 +53,29 @@ section{
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 40px;
+  margin-left: 300px;
+  margin-right: 300px;
+  box-shadow: 0 5px 20px rgba(0,0,0);
+  border-radius: 40px;
+  background-image: url("../../assets/img/bg-page2.png");
 }
 
 .service{
-  margin: 10px;
+  margin: 50px;
   overflow: hidden;
   padding: 35px 15px;
   position: relative;
+  background-color: white;
   text-align: center;
   transition: background-color 0.3s ease-in,
               transform 0.3s ease-in;
   width: 200px;
+  box-shadow: 0 5px 20px rgba(0,0,0);
+  border-radius: 40px;
 }
 
 .service:hover{
-    background-color: #1F6636;
+    background-color: white;
     transform: translateY(-3px);
 }
 
@@ -88,7 +98,7 @@ section{
 
 .service > i{
   display: block;
-  color: #1F6636;
+  color: #081829;
   font-size: 4rem;
   margin-bottom: 0.9rem;
   transition: color 0.3 ease-out;
@@ -112,7 +122,7 @@ section{
 .service:hover > i,
 .service:hover > ..titre-nosServices,
 .service:hover > .descriptionText-nosServices{
-  color:
+  color: #081829;
 }
 
 .row{

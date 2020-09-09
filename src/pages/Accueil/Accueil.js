@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiWorld } from 'react-icons/bi';
 import './Accueil.css'
-import {ReactComponent as Footer} from '../../assets/img/fond_footer-couleur.svg'
+
 
 function Accueil() {
   return (
@@ -9,7 +9,7 @@ function Accueil() {
 
 <main>
 
-  <section className="Background HeaderPage">
+  <section className="Background HeaderPage position-relative">
     <div className="contenair">
       <div className="row">
         <div className="zoneText">
@@ -18,9 +18,9 @@ function Accueil() {
           <hr/>
         </div>
       </div>
-      <image className="bg-page4" src="../../assets/img/bg-page4.png)"/>
-    </div>
 
+    </div>
+<image className="bg-page4" src="../../assets/img/bg-page4.png)"/>
 
 
   </section>
@@ -74,42 +74,7 @@ function Accueil() {
 
 
 
-  <div className="contenair">
-    <div className="row description">
-      <div className="descriptionText">
-        <h1></h1>
-        <p></p>
-
-      </div>
-      <div className="descriptionImg">
-        <h1></h1>
-      </div>
-    </div>
-  </div>
-  <div className="contenair">
-    <div className="row description">
-      <div className="descriptionText">
-        <h1>Le cesi</h1>
-        <p>statut étudiant à cesi</p>
-
-      </div>
-      <div className="descriptionImg">
-        <h1>logo cesi.png</h1>
-      </div>
-    </div>
-  </div>
-  <div className="contenair">
-    <div className="row description">
-      <div className="descriptionText">
-        <h1>Le cesi</h1>
-        <p>statut étudiant à cesi</p>
-
-      </div>
-      <div className="descriptionImg">
-        <h1>logo cesi.png</h1>
-      </div>
-    </div>
-  </div>
+  
 
 
 

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { NavLink  } from "react-router-dom";
 
-import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './getEquipe.css';
-import logo_1 from '../../assets/img/logo_1.png'
+
 
 
 function GetEquipe() {
@@ -44,7 +42,7 @@ function GetEquipe() {
                    <div className="CardEquipe">
                        <p className="Nom"> {data[i].Nom}</p>
                        <p className="Prenom"> {data[i].Prenom}</p>
-                       <img src={'http://graph-it.cesi.group' + data[i].Photo.url}  className="Avatar"/>
+                       <img src={'http://graph-it.cesi.group' + data[i].Photo.url}  className="Avatar" alt="Avatar"/>
                    </div>
 
            )

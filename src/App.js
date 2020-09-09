@@ -20,7 +20,6 @@ import Article from '../src/pages/Article/Article'
 import Accueil from '../src/pages/Accueil/Accueil'
 
 
-import { ReactComponent as Fond } from './assets/img/fond_footer-couleur.svg';
 
 
 

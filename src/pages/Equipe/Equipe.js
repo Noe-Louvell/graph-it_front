@@ -1,8 +1,11 @@
 import React from 'react';
 import './Equipe.css'
 import {ReactComponent as Footer} from '../../assets/img/fond_footer-couleur.svg'
+import GetEquipe from '../../components/GetEquipe/getEquipe'
 
 function Equipe() {
+
+
   return (
 
 
@@ -29,11 +32,23 @@ function Equipe() {
       </div>
       <div className="descriptionImg">
         <div className="logoCesi">
-          <img src="../../assets/img/CESI.png" >
+          <img src="../../assets/img/CESI.png" />
         </div>
       </div>
     </div>
   </div>
+
+  <section className="Background HeaderPage">
+    <div className="contenair">
+      <div className="row">
+        <div className="zoneText">
+          <div>
+              <GetEquipe/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 </main>

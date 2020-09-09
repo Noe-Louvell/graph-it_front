@@ -84,7 +84,7 @@ p{
   text-align: left;
 }
 
-.SéparationBG{
+/*.SéparationBG{
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -100,4 +100,4 @@ p{
     height: 70px;
     -webkit-clip-path: polygon(0 100%,0 0,100% 0,0 100%);
     clip-path: polygon(0 100%,0 0,100% 0,0 100%);
-}
+}*/

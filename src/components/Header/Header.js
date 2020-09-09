@@ -18,7 +18,7 @@ function Header() {
 
               <Nav.Item as="li">
                 <Nav.Link>
-                  <NavLink  to="/" >Accueil</NavLink >
+                  <NavLink  to="/Accueil" >Accueil</NavLink >
                 </Nav.Link>
               </Nav.Item>
 
@@ -36,7 +36,7 @@ function Header() {
 
                 <Nav.Item as="li">
                   <Nav.Link>
-                    <NavLink  to="/">
+                    <NavLink  to="/Accueil">
                     <img className="logo" src={logo_1} alt="Logo" />
                     </NavLink >
                   </Nav.Link>

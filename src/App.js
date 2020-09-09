@@ -37,7 +37,7 @@ function App() {
 
     <Switch>
     <Route path="/Accueil">
-
+    <Accueil/>
     </Route>
 
       <Route path="/Equipe">
@@ -54,6 +54,7 @@ function App() {
       <Route path="/Contact">
 
       </Route>
+
     </Switch>
       </Router>
 

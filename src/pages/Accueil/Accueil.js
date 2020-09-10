@@ -1,6 +1,7 @@
 import React from 'react';
 import { BiWorld } from 'react-icons/bi';
 import './Accueil.css'
+import GetService from '../../components/GetService/getService'
 
 
 function Accueil() {
@@ -35,38 +36,8 @@ function Accueil() {
         pour réaliser un livre spécimen de polices de texte.
         Il n'a pas fait que survivre cinq siècles,
         </p>
-        <div className="services">
-          <div className="service">
-            <i className="fa fa-globe"><BiWorld/></i>
-            <h4 className="titre-nosServices">Web design</h4>
-            <p className="descriptionText-nosServices">
-            Il a été popularisé
-            dans les années 1960 grâce à la vente de feuilles Letraset
-            contenant des passages du Lorem Ipsum,
-            </p>
-          </div>
 
-          <div className="service">
-
-            <i className="fa fa-globe"><BiWorld/></i>
-            <h4 className="titre-nosServices">Developpement Web</h4>
-            <p className="descriptionText-nosServices">
-            Il a été popularisé
-            dans les années 1960 grâce à la vente de feuilles Letraset
-            contenant des passages du Lorem Ipsum,
-            </p>
-          </div>
-
-          <div className="service">
-            <i className="fa fa-globe"><BiWorld/></i>
-            <h4 className="titre-nosServices">Developpement d'applications</h4>
-            <p className="descriptionText-nosServices">
-            Il a été popularisé
-            dans les années 1960 grâce à la vente de feuilles Letraset
-            contenant des passages du Lorem Ipsum, et,
-            </p>
-          </div>
-        </div>
+        <GetService/>
 
 
   </div>
@@ -74,7 +45,7 @@ function Accueil() {
 
 
 
-  
+
 
 
 

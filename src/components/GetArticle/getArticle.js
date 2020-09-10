@@ -41,18 +41,14 @@ function GetArticle() {
            //console.log(data[i].Photo.url)
            ViewContent.push(
 
-
-
-                    </div>
-
                       <div className="CardText">
-                        <p className="Nom"> {data[i].TitrA}</p>
+                        <p className="Nom"> {data[i].TitreA}</p>
 
 
                       </div>
 
 
-                   </div>
+
 
            )
        }

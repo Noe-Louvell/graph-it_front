@@ -29,7 +29,7 @@ function Accueil() {
 
 
 
-  <section className="Nos Services">
+  <section className="nosServices">
   <div className="contenaire">
         <h1>Nos Services</h1>
         <p>quand un imprimeur anonyme assembla ensemble des morceaux de texte
@@ -41,6 +41,18 @@ function Accueil() {
 
 
   </div>
+  </section>
+
+  <section className="nosEquipes">
+
+    <div className="contenaire">
+
+      <div className="services2">
+
+      </div>
+
+    </div>
+
   </section>
 
 

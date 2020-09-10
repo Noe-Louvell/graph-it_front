@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BiWorld } from 'react-icons/bi';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './getService.css';
+
 
 
 

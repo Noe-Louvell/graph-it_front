@@ -51,7 +51,7 @@ function GetEquipe() {
                         <p className="Prenom"> {data[i].Prenom}</p>
 
                       </div>
-                        <p className="Formation">{data[i].Formation}</p>            
+                        <p className="Formation">{data[i].Formation}</p>
 
                    </div>
 

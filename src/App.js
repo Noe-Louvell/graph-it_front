@@ -32,9 +32,6 @@ function App() {
 
     <Header/>
 
-    <Route path="/Accueil">
-    
-    </Route>
 
 
     <Switch>

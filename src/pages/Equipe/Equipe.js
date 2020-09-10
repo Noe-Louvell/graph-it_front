@@ -3,8 +3,6 @@ import './Equipe.css'
 import GetEquipe from '../../components/GetEquipe/getEquipe'
 
 function Equipe() {
-
-
   return (
 
 

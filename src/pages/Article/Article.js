@@ -1,14 +1,25 @@
 import React from 'react';
 import './Article.css'
+import GetArticle from '../../components/GetArticle/getArticle'
 
-
-function Equipe() {
+function Article() {
   return (
 
 
-    <div></div>
+<main>
+
+
+          <div>
+              <GetArticle/>
+          </div>
+
+
+
+</main>
+
+
 
   );
 }
 
-export default Equipe;
+export default Article;

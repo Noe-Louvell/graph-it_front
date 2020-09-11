@@ -18,6 +18,7 @@ import Header from './components/Header/Header';
 import Equipe from '../src/pages/Equipe/Equipe'
 import Article from '../src/pages/Article/Article'
 import Accueil from '../src/pages/Accueil/Accueil'
+import Service from '../src/pages/Service/Service'
 
 
 
@@ -41,6 +42,10 @@ function App() {
 
       <Route path="/Equipe">
         <Equipe />
+      </Route>
+
+      <Route path="/Service">
+        <Service />
       </Route>
 
       <Route path="/Articles">

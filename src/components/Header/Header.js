@@ -30,7 +30,7 @@ function Header() {
 
                 <Nav.Item as="li" defaultActiveKey="/articles">
                   <Nav.Link>
-                    <NavLink  to="/Services">Nos Services</NavLink >
+                    <NavLink  to="/Service">Nos Services</NavLink >
                   </Nav.Link>
                 </Nav.Item>
 

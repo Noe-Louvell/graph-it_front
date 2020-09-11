@@ -1,5 +1,4 @@
 import React from 'react';
-import { BiWorld } from 'react-icons/bi';
 import './Accueil.css'
 import GetService from '../../components/GetService/getService'
 
@@ -21,7 +20,7 @@ function Accueil() {
       </div>
 
     </div>
-<image className="bg-page4" src="../../assets/img/bg-page4.png)"/>
+
 
 
   </section>
@@ -48,6 +47,14 @@ function Accueil() {
     <div className="contenaire">
 
       <div className="services2">
+
+        <div className="row">
+          <div className="zoneText2">
+            <h1>Les Cesidiants</h1>
+            <h2> Etudiants au CESI </h2>
+            <hr/>
+          </div>
+        </div>
 
       </div>
 

@@ -44,9 +44,9 @@ function GetService() {
              <div className="service">
                <i className="fa fa-globe"><BiWorld/></i>
                <h4 className="titre-nosServices"><p className="Titre"> {data[i].Titre}</p></h4>
-               <p className="descriptionText-nosServices">
+               <div className="descriptionText-nosServices">
                <p className="Description">{data[i].Description}</p>
-               </p>
+               </div>
              </div>
 
            )

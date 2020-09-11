@@ -1,0 +1,33 @@
+section{
+  margin-top: -1px;
+}
+.HeaderPage{
+  display: flex;
+  align-items: center;
+  padding-top: 77px;
+  border-bottom: 1px solid #fff;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 420px;
+  color: #fff;
+}
+
+.Background{
+    background-image: url("../../assets/img/bg-page2.png");
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+
+.contenair{
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.tabs {
+  color: black;
+}

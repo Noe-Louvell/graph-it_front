@@ -18,9 +18,8 @@ import Header from './components/Header/Header';
 import Equipe from '../src/pages/Equipe/Equipe'
 import Article from '../src/pages/Article/Article'
 import Accueil from '../src/pages/Accueil/Accueil'
+import Réalisation from '../src/pages/Réalisation/Réalisation'
 import Service from '../src/pages/Service/Service'
-
-
 
 
 
@@ -53,7 +52,7 @@ function App() {
       </Route>
 
       <Route path="/Réalisations">
-
+        <Réalisation />
       </Route>
       <Route path="/Contact">
 

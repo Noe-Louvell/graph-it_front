@@ -32,7 +32,7 @@ function App() {
 
     <Header/>
 
-
+    <Route exact path="/" component={Accueil}/>
 
     <Switch>
     <Route path="/Accueil">

@@ -6,28 +6,35 @@ function Contact() {
   return (
 
 
-<main>
+    <main id="Body">
 
-  <section className="Background HeaderPage">
-    <div className="contenair">
-      <div className="row">
-        <div className="zoneText">
-          <h1> Nous contacter </h1>
-          <h2> Contactez nos étudiant par message ou téléphone </h2>
+      <section className="Background HeaderPage">
+        <div className="contenair">
+          <div className="row">
+            <div className="zoneText">
+              <h1> Nous contacter </h1>
+              <h2> Contactez nos étudiant par message ou téléphone </h2>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+        <div className="FormContenair">
+         
+
+            <PostContact />
+
+        
+        </div>
+      </section>
 
 
-  <div className="contenair">
-    
-  </div>
-
- 
 
 
-</main>
+
+
+
+
+
+    </main>
 
 
 

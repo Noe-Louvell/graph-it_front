@@ -1,90 +1,90 @@
 import React, { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './Contact.css'
+import './PostContact.css'
 
 
 
 function Contact() {
 
-    const [demandeDevis,setDemandeDevis] = useState(false);
-    const [inp_Email,setInpEmail] =useState('')
-    const [inp_NumTel,setInpNumTel] =useState('')
-    const [inp_Nom,setInpNom] =useState('')
-    const [inp_Prenom,setInpPrenom] =useState('')
-    const [inp_Entreprise,setInpEntreprise] =useState('')
-    const [inp_TypeProjet,setInpTypeProjet] =useState('')
-    const [inp_Message,setInpMessage] =useState('')
-    
-    const [errorEmail,setErrorEmail] = useState('none')
-    const [errorNumTel,setErrorNumTel] = useState('')
-    const [errorNom,setErrorNom]=useState('none')
-    const [errorPrenom,setErrorPrenom]=useState('none')
-    const [errorMessage,setErrorMessage]=useState('none')
-    const [errorEntreprise,setErrorEntreprise]=useState('none')
+    const [demandeDevis, setDemandeDevis] = useState(false);
+    const [inp_Email, setInpEmail] = useState('')
+    const [inp_NumTel, setInpNumTel] = useState('')
+    const [inp_Nom, setInpNom] = useState('')
+    const [inp_Prenom, setInpPrenom] = useState('')
+    const [inp_Entreprise, setInpEntreprise] = useState('')
+    const [inp_TypeProjet, setInpTypeProjet] = useState('')
+    const [inp_Message, setInpMessage] = useState('')
 
-    const [displayError,setDisplayError] = useState('')
+    const [errorEmail, setErrorEmail] = useState('none')
+    const [errorNumTel, setErrorNumTel] = useState('')
+    const [errorNom, setErrorNom] = useState('none')
+    const [errorPrenom, setErrorPrenom] = useState('none')
+    const [errorMessage, setErrorMessage] = useState('none')
+    const [errorEntreprise, setErrorEntreprise] = useState('none')
 
-    function CheckSend(){
-   
-        if(errorEmail != ''){
-            if(errorEmail == 'none'){
+    const [displayError, setDisplayError] = useState('')
+
+    function CheckSend() {
+
+        if (errorEmail != '') {
+            if (errorEmail == 'none') {
                 setDisplayError('veuillez renseigner une adresse email')
                 setErrorEmail('veuillez renseigner une adresse email')
                 return;
             }
-            else{
+            else {
                 setDisplayError(errorEmail)
                 return;
             }
-        }else{
+        } else {
             setDisplayError('')
         }
 
-        if(errorNumTel != ''){
-                setDisplayError(errorNumTel)
-                return;
-        }else{
+        if (errorNumTel != '') {
+            setDisplayError(errorNumTel)
+            return;
+        } else {
             setDisplayError('')
         }
 
-        if(inp_Nom == ''){
+        if (inp_Nom == '') {
             setDisplayError('Veuillez renseigner votre nom')
             setErrorNom('Veuillez renseigner votre nom')
             return;
         }
-        else{
+        else {
             setDisplayError('')
             setErrorNom('')
 
         }
 
-        if(inp_Prenom == ''){
+        if (inp_Prenom == '') {
             setDisplayError('Veuillez renseigner votre prenom')
             setErrorPrenom('Veuillez renseigner votre prenom')
             return;
         }
-        else{
+        else {
             setDisplayError('')
             setErrorPrenom('')
         }
 
-        if(inp_Entreprise == '' & demandeDevis == true){
+        if (inp_Entreprise == '' & demandeDevis == true) {
             setDisplayError('Vous devez renseigner votre entreprise pour une demande de devis')
             setErrorEntreprise('Vous devez renseigner votre entreprise pour une demande de devis')
             return;
         }
-        else{
+        else {
             setDisplayError('')
             setErrorEntreprise('')
         }
 
-        if(inp_Message == ''){
+        if (inp_Message == '') {
             setDisplayError('Veuillez renseigner votre message')
             setErrorMessage('Veuillez renseigner votre message')
             return;
         }
-        else{
+        else {
             setDisplayError('')
             setErrorMessage('')
         }
@@ -92,74 +92,84 @@ function Contact() {
         console.log('tentative envoi')
 
         fetch("http://graph-it.cesi.group/clients", {
-                method: "post",
-                headers: {
-                    "content-type": "application/json"
-                },
-                body: JSON.stringify({
-                    NomSociete: inp_Entreprise,
-                    NomC:inp_Nom,
-                    PrenomC:inp_Prenom,
-                    TypeC:inp_TypeProjet,
-                    CommentaireC:inp_Message,
-                    MailC:inp_Email,
-                    NumeroC:inp_NumTel,
-                })
-            }).then((res) => console.log(res.json()))
-        
+            method: "post",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify({
+                NomSociete: inp_Entreprise,
+                NomC: inp_Nom,
+                PrenomC: inp_Prenom,
+                TypeC: inp_TypeProjet,
+                CommentaireC: inp_Message,
+                MailC: inp_Email,
+                NumeroC: inp_NumTel,
+            })
+        }).then((res) => console.log(res.json()))
+
     }
 
     function checkEmail(str) {
         setInpEmail(str);
         var regex = /[^@ \t\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
-        
-        if(str == ''){
+
+        if (str == '') {
             setErrorEmail("Veuillez renseigner une adresse email")
         }
-        else{
-            if(regex.test(str)){
+        else {
+            if (regex.test(str)) {
                 setErrorEmail('')
             }
-            else{
+            else {
                 setErrorEmail("Veuillez entrer une adresse email valide")
             }
         }
-        
+
     }
 
-    function checkNumTel(str){
+    function checkNumTel(str) {
         setInpNumTel(str);
         var regex = /^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$/;
 
 
-        if(regex.test(str) || str==''){
+        if (regex.test(str) || str == '') {
             setErrorNumTel('')
         }
-        else{
+        else {
             setErrorNumTel("Veuillez entrer un numéro de téléphone valide")
         }
     }
 
-    function DevisSwitch(){
-        if(demandeDevis === false){
+    function DevisSwitch() {
+        if (demandeDevis === false) {
             setDemandeDevis(true)
         }
-        else{
+        else {
             setDemandeDevis(false)
         }
     }
 
-    
 
 
 
-  return (
 
-    <div className="BoxFormulaire">
-        <p>Test</p>
-    </div>
-   
-);
+    return (
+
+       
+
+        <div className="formBox">
+        <input className="formImput" type="text" placeholder="Nom*"/>
+        <input className="formImput" type="text" placeholder="Prénom*"/>
+        <input className="formImput" type="text" placeholder="Adresse e-mail*"/>
+        <input className="formImput" type="text" placeholder="Numéro de téléphone*"/>
+        
+        </div>
+
+
+
+
+
+    );
 }
 
 

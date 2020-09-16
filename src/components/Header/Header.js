@@ -11,6 +11,59 @@ function Header() {
 
   return (
 
+<<<<<<< HEAD
+=======
+          <div id="Header"className="fixed-top">
+
+            <div className="Menu">
+              <Nav as="ul" className="justify-content-center">
+
+              <Nav.Item as="li">
+                <Nav.Link>
+                  <NavLink  to="/Accueil" >Accueil</NavLink >
+                </Nav.Link>
+              </Nav.Item>
+
+                <Nav.Item as="li">
+                  <Nav.Link className="MenuText">
+                    <NavLink  to="/Equipe">L'Equipe</NavLink >
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item as="li" defaultActiveKey="/articles">
+                  <Nav.Link>
+                    <NavLink  to="/Service">Nos Services</NavLink >
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <NavLink  to="/Accueil">
+                    <img className="logo" src={logo_1} alt="Logo" />
+                    </NavLink >
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <NavLink  to="/Realisation">Realisations</NavLink >
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <NavLink  to="/Articles">Articles</NavLink >
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item as="li">
+                  <Nav.Link>
+                    <NavLink  to="/Contact">Nous contacter</NavLink>
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+
+>>>>>>> f54a0119d2e362dfb41c2dd0b83e5633fedb4077
 
     <Navbar bg="light " expand="lg" fixed="top">
   <Navbar.Brand to="/Accueil"><img className="logo" src={logo_1} alt="Logo" /></Navbar.Brand>

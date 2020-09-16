@@ -26,7 +26,7 @@ function Service() {
 
           <hr/><br/>
           <h2>Nos compétences </h2>
-          
+
         </div>
       </div>
 
@@ -39,7 +39,7 @@ function Service() {
 
 
   <div className="section2">
-        
+
 <Tabs defaultActiveKey="nav-tab-1" id="uncontrolled-tab-example" className="justify-content-center">
   <Tab eventKey="nav-tab-1" title="Web Design">
   <div className="container">
@@ -206,7 +206,7 @@ function Service() {
                   <img src={ecran} alt="ecran" className="img-fluid" />
                 </div>
                   <div className="col-md-8">
-                  
+
                   <div className="text-area">
                     <h3>BONJOUR</h3>
                     <br/><br/>
@@ -215,8 +215,8 @@ function Service() {
 
                     </div>
                       <br/><br/>
-                    
-              
+
+
               <div className="icon-cards-area">
                 <div className="card">
                   <div className="card-icon">
@@ -254,9 +254,9 @@ function Service() {
   <Tab eventKey="nav-tab-3" title="Developpement d'Applications">
   <div className="container">
               <div className="row">
-                
+
                   <div className="col-md-8">
-                  
+
                   <div className="text-area">
                     <h3>BONJOUR</h3>
                     <br/><br/>
@@ -265,8 +265,8 @@ function Service() {
 
                     </div>
                       <br/><br/>
-                    
-              
+
+
               <div className="icon-cards-area">
                 <div className="card">
                   <div className="card-icon">
@@ -293,9 +293,9 @@ function Service() {
                   <h4 className="card-title">BONJOUR</h4>
                   <p>FIEHHF ZOFH OIHZFPOZEFOPZ OPEFPOZE PF</p>
                   </div>
-                  
+
                 </div>
-                
+
 
               </div>
             </div>

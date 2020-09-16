@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .descriptionTitre{
   background: -webkit-linear-gradient(.9turn,#2CDA6C 10%,#C5FFFF);
-  -webkit-background-clip: text;
+  
   -webkit-text-fill-color: transparent;
   text-align: initial;
   margin-bottom: 3%;

@@ -1,0 +1,16 @@
+
+.HeaderPage{
+    margin-top: 5%;
+    flex-direction: column;
+
+}
+
+.FormContenair{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 20px;
+    width: 40%;
+}

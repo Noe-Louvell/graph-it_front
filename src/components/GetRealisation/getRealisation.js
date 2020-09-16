@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
-import { BiWorld } from 'react-icons/bi';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Card from 'react-bootstrap/Card'
-import CardDeck from 'react-bootstrap/CardDeck'
+import './getRealisation.css';
 
 
 
-
-function GetService() {
+function GetRealisation() {
 
 
 
   const [data, setData] = useState(null);
- function getServiceFunction() {
+ function getRealisationFunction() {
 
 
-         fetch('http://graph-it.cesi.group/Services', {
+         fetch('http://graph-it.cesi.group/Realisations', {
              method: 'GET',
              dataType: 'json',
              headers: {
@@ -43,37 +41,34 @@ function GetService() {
            //console.log(data[i].Photo.url)
            ViewContent.push(
 
-            
-            <Card border="light" style={{ width: '18rem'}}>
-            
-            <Card.Body>
-              <Card.Title>{data[i].Titre}</Card.Title>
-              <Card.Text>
-                {data[i].Description}
-              </Card.Text>
-            </Card.Body>
-            </Card>
-            
+                      <div className="CardText">
+                        <p className="Nom"> {data[i].TitreR}</p>
 
-      
+
+                      </div>
+
+
+
 
            )
        }
    }
    else {
-       getServiceFunction();}
+       getRealisationFunction();}
 
 
   return (
 
-            <CardDeck>
+
+
+            <div className="boxPersonne">
 
             {ViewContent}
 
-            </CardDeck>
+            </div>
 
   );
 }
 
 
-export default GetService
+export default GetRealisation

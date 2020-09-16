@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-
+import './getEquipe.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './getEquipe.css';
 
 
 
-function GetEquipe() {
 
-    
+function GetEquipe2() {
+
+
 
   const [data, setData] = useState(null);
- function getEquipeFunction() {
+ function getEquipe2Function() {
 
 
          fetch('http://graph-it.cesi.group/Equipes', {
@@ -74,66 +74,41 @@ function GetEquipe() {
 
            ViewContent.push(
 
-             <div className="contenairCard">
+             <div className="">
 
-                   <div className="CardEquipe">
-                    <div  className="face face1">
-                          <div className="CardImg">
-                            <img src={'http://graph-it.cesi.group' + data[i].Photo.url}  className="Avatar" alt="Avatar"/>
-                          </div>
 
-                          <div className="CardText">
-                            <p className="Nom"> {data[i].Nom}</p>
-                            <p className="Prenom"> {data[i].Prenom}</p>
+                            <h3 className="Nom"> {data[i].Nom}</h3>
+                            <h3 className="Prenom"> {data[i].Prenom}</h3>
 
-                          </div>
-                          <p className="Formation">{data[i].Formation}</p>
-                    </div>
-
-                    <div  className="face face2">
-                      <div className="CardText">
-                        <p className="NomCompétence">   {ViewContent2}</p>
-                        <p className="NomCompétence">{ViewContent3}</p>
-
-                      </div>
 
 
                     </div>
-
-                   </div>
-
-
-                   </div>
-
-
-
-
 
 
            )
-         
-           
+
+
        }
    }
- 
-   else {
-       getEquipeFunction();}
 
-   
+   else {
+       getEquipe2Function();}
+
+
 
 
   return (
 
+    <div className="zoneText2">
+
+          {ViewContent}
 
 
-            <div className="boxPersonne">
+    </div>
 
-            {ViewContent}
-
-            </div>
 
   );
 }
 
 
-export default GetEquipe
+export default GetEquipe2

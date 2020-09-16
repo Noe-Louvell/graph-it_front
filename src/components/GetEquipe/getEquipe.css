@@ -1,13 +1,17 @@
-.CardEquipe{
+.contenairCard{
+  width: 320px;
   display: flex;
-  background-color: #fff;
-  margin:5%;
-  width: 15%;
   flex-direction: column;
-  box-shadow: 0 7px 6px 0 rgba(0,0,0,.1);
-
-  border-radius: 15px;
+  margin: 3.5%;
 }
+
+.contenairCard .CardEquipe{
+  display: flex;
+
+  flex-direction: column;
+
+}
+
 .CardText{
   display: flex;
   justify-content: center;
@@ -33,6 +37,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: -6%;
+
 }
 
 .Avatar{
@@ -41,4 +48,54 @@
   width: 150px;
   height:150px;
   border-radius: 100px;
+}
+
+.contenairCard .CardEquipe .face{
+  transition: 0.5s;
+}
+
+.contenairCard .CardEquipe .face.face1{
+  position: relative;
+  z-index: 1;
+  transform: translateY(81px);
+  background: #f5f5f5;
+  box-shadow: 0 7px 6px 0 rgba(0,0,0,.1);
+  border-radius: 15px;
+
+
+}
+
+.contenairCard .CardEquipe:hover .face.face1{
+
+  transform: translateY(0);
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  box-shadow: 0 0 0 0;
+}
+.contenairCard .CardEquipe .face.face2{
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  box-sizing: border-box;
+  background: #f5f5f5;
+  box-shadow: 0 7px 6px 0 rgba(0,0,0,.1);
+
+
+
+}
+.NomCompétence{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.NomCompétence p{
+  margin-right: 5px;
+  color: black;
 }

@@ -7,7 +7,7 @@ import './getEquipe.css';
 
 function GetEquipe() {
 
-
+    
 
   const [data, setData] = useState(null);
  function getEquipeFunction() {
@@ -33,33 +33,93 @@ function GetEquipe() {
              })
      }
      var ViewContent = [];
-     console.log(data);
+
 
 
    if (data != null) {
        for (var i = 0; i < data.length; i++) {
-           //console.log(data[i].Photo.url)
+
+          var ViewContent2 = [];
+           var ViewContent3 = [];
+           const parameter = data[i].id
+
+           if(data[i].competences.length === 0){
+               console.log('dans la boucle')
+               ViewContent2.push(
+                   <p>
+                       Aucunes compétences enregistrées
+                   </p>
+               )
+           }
+           for(let j=0 ; j<data[i].competences.length;j++){
+               ViewContent2.push(
+                   <p>
+                       {data[i].competences[j].Nom}
+                   </p>
+               )
+           }
+
+           if(data[i].realisations.length === 0){
+               ViewContent3.push(
+                   <p>
+                       Aucunes réalisations enregistrées
+                   </p>
+               )
+           }
+           for(let j=0 ; j<data[i].realisations.length;j++){
+               ViewContent3.push(
+                   <p>
+                       {data[i].realisations[j].TitreR}
+                   </p>)}
+
            ViewContent.push(
 
+             <div className="contenairCard">
+
                    <div className="CardEquipe">
-                    <div className="CardImg">
-                      <img src={'http://graph-it.cesi.group' + data[i].Photo.url}  className="Avatar" alt="Avatar"/>
+                    <div  className="face face1">
+                          <div className="CardImg">
+                            <img src={'http://graph-it.cesi.group' + data[i].Photo.url}  className="Avatar" alt="Avatar"/>
+                          </div>
+
+                          <div className="CardText">
+                            <p className="Nom"> {data[i].Nom}</p>
+                            <p className="Prenom"> {data[i].Prenom}</p>
+
+                          </div>
+                          <p className="Formation">{data[i].Formation}</p>
                     </div>
 
+                    <div  className="face face2">
                       <div className="CardText">
-                        <p className="Nom"> {data[i].Nom}</p>
-                        <p className="Prenom"> {data[i].Prenom}</p>
+                        <p className="NomCompétence">   {ViewContent2}</p>
+                        <p className="NomCompétence">{ViewContent3}</p>
 
                       </div>
-                        <p className="Formation">{data[i].Formation}</p>
+
+
+                    </div>
 
                    </div>
 
+
+                   </div>
+
+
+
+
+
+
            )
+         
+           
        }
    }
+ 
    else {
        getEquipeFunction();}
+
+   
 
 
   return (

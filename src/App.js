@@ -19,7 +19,7 @@ import Footer from './components/Footer/Footer';
 import Equipe from '../src/pages/Equipe/Equipe'
 import Article from '../src/pages/Article/Article'
 import Accueil from '../src/pages/Accueil/Accueil'
-import Réalisation from '../src/pages/Réalisation/Réalisation'
+import Réalisation from '../src/pages/Realisation/Realisation'
 import Service from '../src/pages/Service/Service'
 import Contact from '../src/pages/Contact/Contact'
 
@@ -53,7 +53,7 @@ function App() {
         <Article />
       </Route>
 
-      <Route path="/Réalisations">
+      <Route path="/Realisations">
         <Réalisation />
       </Route>
 

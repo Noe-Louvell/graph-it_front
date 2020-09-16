@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './getRéalisation.css';
+import './getRealisation.css';
 
 
 
-function GetRéalisation() {
+function GetRealisation() {
 
 
 
   const [data, setData] = useState(null);
- function getRéalisationFunction() {
+ function getRealisationFunction() {
 
 
          fetch('http://graph-it.cesi.group/Realisations', {
@@ -54,7 +54,7 @@ function GetRéalisation() {
        }
    }
    else {
-       getRéalisationFunction();}
+       getRealisationFunction();}
 
 
   return (
@@ -71,4 +71,4 @@ function GetRéalisation() {
 }
 
 
-export default GetRéalisation
+export default GetRealisation

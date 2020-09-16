@@ -1,8 +1,8 @@
 import React from 'react';
-import './Réalisation.css'
-import GetRéalisation from '../../components/GetRéalisation/getRéalisation'
+import './Realisation.css'
+import GetRealisation from '../../components/GetRealisation/getRealisation'
 
-function Réalisation() {
+function Realisation() {
 
 
   const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
@@ -179,4 +179,4 @@ function Réalisation() {
   );
 }
 
-export default Réalisation;
+export default Realisation;

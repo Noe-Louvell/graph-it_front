@@ -13,16 +13,16 @@ function Contact() {
           <div className="row">
             <div className="zoneText">
               <h1> Nous contacter </h1>
-              <h2> Contactez nos étudiant par message ou téléphone </h2>
+              <h2> Contactez nos étudiants par message ou téléphone </h2>
             </div>
           </div>
         </div>
         <div className="FormContenair">
-         
+
 
             <PostContact />
 
-        
+
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Accueil.css'
 import GetService from '../../components/GetService/getService'
+import GetEquipe2 from '../../components/GetEquipe/getEquipe2'
 
 
 function Accueil() {
@@ -47,13 +48,9 @@ function Accueil() {
     <div className="contenaire">
 
       <div className="services2">
-
+        <h1>Notre équipe pour vos réalisations</h1>
         <div className="row">
-          <div className="zoneText2">
-            <h1>Les Cesidiants</h1>
-            <h2> Etudiants au CESI </h2>
-            <hr/>
-          </div>
+            <GetEquipe2/>
         </div>
 
       </div>

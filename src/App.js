@@ -21,6 +21,7 @@ import Article from '../src/pages/Article/Article'
 import Accueil from '../src/pages/Accueil/Accueil'
 import Réalisation from '../src/pages/Réalisation/Réalisation'
 import Service from '../src/pages/Service/Service'
+import Contact from '../src/pages/Contact/Contact'
 
 
 
@@ -57,6 +58,7 @@ function App() {
       </Route>
 
       <Route path="/Contact">
+        <Contact/>
 
       </Route>
 

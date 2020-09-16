@@ -9,7 +9,7 @@ function Footer() {
 
   return (
 
-          <div>
+          <div id="Footer">
 
           <p>Mentions légales. Politique relative aux cookies
 Graph-It © 2020. Tous droits réservés.</p>

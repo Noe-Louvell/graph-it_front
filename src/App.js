@@ -13,6 +13,7 @@ import {
 // Import des components du site
 import './components/Header/Header.css';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 // Import des pages du site
 import Equipe from '../src/pages/Equipe/Equipe'
@@ -55,12 +56,17 @@ function App() {
       <Route path="/Réalisations">
         <Réalisation />
       </Route>
+
       <Route path="/Contact">
         <Contact/>
 
       </Route>
 
     </Switch>
+
+
+      <Footer/>
+
       </Router>
 
 

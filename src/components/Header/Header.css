@@ -20,13 +20,17 @@
 
 a{
   color: black;
-  font-size: 110%
+  font-size: 105%;
+  margin-left: 2%;
 }
 
 a:hover{
   color: #2CDA6C;
 }
 
+.active{
+  color: #2CDA6C;
+}
 .logo{
 
   width: 80%
@@ -38,5 +42,9 @@ a:hover{
 
 .active{
   color: 'black'
+  
 
+}
+.navbar-nav {
+  width: 56%;
 }

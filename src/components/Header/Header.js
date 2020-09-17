@@ -16,12 +16,12 @@ function Header() {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto ">
-    <Nav.Link  to="/Accueil" >Accueil</Nav.Link >
-    <Nav.Link  to="/Equipe">L'Equipe</Nav.Link >
-    <Nav.Link  to="/Service">Nos Services</Nav.Link >
-    <Nav.Link  to="/Realisation">Realisations</Nav.Link >
-    <Nav.Link  to="/Articles">Articles</Nav.Link >
-    <Nav.Link  to="/Contact">Nous contacter</Nav.Link>
+    <NavLink  to="/Accueil" >Accueil</NavLink >
+    <NavLink  to="/Equipe">L'Equipe</NavLink >
+    <NavLink  to="/Service">Nos Services</NavLink >
+    <NavLink  to="/Realisation">Realisations</NavLink >
+    <NavLink  to="/Articles">Articles</NavLink >
+    <NavLink  to="/Contact">Nous contacter</NavLink>
     </Nav>
   </Navbar.Collapse>
 </Navbar>

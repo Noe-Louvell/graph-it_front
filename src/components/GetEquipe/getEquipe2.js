@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './getEquipe.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
 
 
 
@@ -76,9 +78,19 @@ function GetEquipe2() {
 
              <div className="">
 
+                                <Card>
+                                    <Card.Img variant="top" src={'http://graph-it.cesi.group' + data[i].Photo.url} className="Avatar2"  alt="Avatar" />
+                                    <Card.Body>
+                                    <Card.Title><h3 className="Nom"> {data[i].Nom}</h3><h3 className="Prenom"> {data[i].Prenom}</h3></Card.Title>
+                                    <Card.Text>
+        
+                                    </Card.Text>
+                                    </Card.Body>
+                                    <Card.Footer>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                    </Card.Footer>
+                                </Card>
 
-                            <h3 className="Nom"> {data[i].Nom}</h3>
-                            <h3 className="Prenom"> {data[i].Prenom}</h3>
 
 
 
@@ -99,12 +111,14 @@ function GetEquipe2() {
 
   return (
 
-    <div className="zoneText2">
+    <CardDeck>{ViewContent}</CardDeck>
 
-          {ViewContent}
+    
+
+          
 
 
-    </div>
+    
 
 
   );

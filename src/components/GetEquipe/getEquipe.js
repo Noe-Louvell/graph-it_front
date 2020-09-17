@@ -90,15 +90,7 @@ function GetEquipe() {
                           <p className="Formation">{data[i].Formation}</p>
                     </div>
 
-                    <div  className="face face2">
-                      <div className="CardText">
-                        <p className="NomCompétence">   {ViewContent2}</p>
-                        <p className="NomCompétence">{ViewContent3}</p>
-
-                      </div>
-
-
-                    </div>
+                    
 
                    </div>
 

@@ -14,11 +14,23 @@ section{
 }
 
 .Background{
-    background-image: url("../../assets/img/bg-page2.png");
+  background: linear-gradient(135deg, rgba(8, 65, 25, 0.9) 0%, rgba(17, 92, 27, 0.8) 100%), url("../../assets/img/bg-page2.jpg"), no-repeat;
     background-position: top;
-    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
 }
 
+.Background::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  background: url("../../assets/img/wave-small.png") center no-repeat;
+  background-size: cover;
+}
 
 .contenair{
   width: 100%;

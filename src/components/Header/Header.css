@@ -28,7 +28,7 @@ a:hover{
   color: #2CDA6C;
 }
 
-.active{
+a.active{
   color: #2CDA6C;
 }
 .logo{
@@ -40,11 +40,7 @@ a:hover{
   margin-top: 15px
 }
 
-.active{
-  color: 'black'
-  
 
-}
 .navbar-nav {
   width: 56%;
 }

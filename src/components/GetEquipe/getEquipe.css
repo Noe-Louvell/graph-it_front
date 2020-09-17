@@ -57,7 +57,7 @@
 .contenairCard .CardEquipe .face.face1{
   position: relative;
   z-index: 1;
-  transform: translateY(81px);
+  
   background: #f5f5f5;
   box-shadow: 0 7px 6px 0 rgba(0,0,0,.1);
   border-radius: 15px;
@@ -67,7 +67,7 @@
 
 .contenairCard .CardEquipe:hover .face.face1{
 
-  transform: translateY(0);
+
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   box-shadow: 0 0 0 0;

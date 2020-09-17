@@ -17,19 +17,19 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="FormContenair">
 
-
-            <PostContact />
-
-
-        </div>
       </section>
 
 
 
 
+      <div className="FormContenair">
 
+
+        <PostContact />
+
+
+      </div>
 
 
 

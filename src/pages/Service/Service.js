@@ -69,7 +69,7 @@ function Service() {
 
       </div>
 
-    </div>
+    </div><br/>
 
     <div className="card left-pane  border border-0">
 
@@ -91,7 +91,7 @@ function Service() {
 
       </div>
 
-    </div>
+    </div><br/>
 
     <div className="card left-panel first  border border-0">
 
@@ -113,7 +113,7 @@ function Service() {
 
       </div>
 
-    </div>
+    </div><br/>
 
     <div className="card left-panel first  border border-0">
 
@@ -135,7 +135,7 @@ function Service() {
 
       </div>
 
-    </div>
+    </div><br/>
 
 
 
@@ -157,7 +157,29 @@ function Service() {
 
         </div>
       </div>
-    </div>
+    </div><br/>
+    <div class="card right-pane first  border border-0">
+      <div class="card-body">
+        <div class="card-icon">
+        </div>
+        <div class="text-wrapper">
+          <h4 class="card-title">BONJOUR</h4>
+          <p>HZFEUEF EZHFIHZEF IZEUFHIUZEHF OEZFO HO</p>
+
+        </div>
+      </div>
+    </div><br/>
+    <div class="card right-pane first  border border-0">
+      <div class="card-body">
+        <div class="card-icon">
+        </div>
+        <div class="text-wrapper">
+          <h4 class="card-title">BONJOUR</h4>
+          <p>HZFEUEF EZHFIHZEF IZEUFHIUZEHF OEZFO HO</p>
+
+        </div>
+      </div>
+    </div><br/>
     <div class="card right-pane first  border border-0">
       <div class="card-body">
         <div class="card-icon">
@@ -169,30 +191,8 @@ function Service() {
         </div>
       </div>
     </div>
-    <div class="card right-pane first  border border-0">
-      <div class="card-body">
-        <div class="card-icon">
-        </div>
-        <div class="text-wrapper">
-          <h4 class="card-title">BONJOUR</h4>
-          <p>HZFEUEF EZHFIHZEF IZEUFHIUZEHF OEZFO HO</p>
 
-        </div>
-      </div>
-    </div>
-    <div class="card right-pane first  border border-0">
-      <div class="card-body">
-        <div class="card-icon">
-        </div>
-        <div class="text-wrapper">
-          <h4 class="card-title">BONJOUR</h4>
-          <p>HZFEUEF EZHFIHZEF IZEUFHIUZEHF OEZFO HO</p>
-
-        </div>
-      </div>
-    </div>
-
-  </div>
+  </div><br/>
 
 
 </div>
@@ -213,8 +213,8 @@ function Service() {
 
                     <p>IFJEOFIJE EOIFJ OZIJEF OIZEJF OIJEZ OIJFO IJ</p>
 
-                    </div>
-                      <br/><br/>
+                    </div><br/>
+
 
 
               <div className="icon-cards-area">
@@ -225,7 +225,7 @@ function Service() {
                   <h4 class="card-title">BONJOUR</h4>
                   <p>FIEHHF ZOFH OIHZFPOZEFOPZ OPEFPOZE PF</p>
                   </div>
-                </div>
+                </div><br/>
 
                 <div className="card">
                   <div className="card-icon">
@@ -234,7 +234,7 @@ function Service() {
                   <h4 className="card-title">BONJOUR</h4>
                   <p>FIEHHF ZOFH OIHZFPOZEFOPZ OPEFPOZE PF</p>
                   </div>
-                </div>
+                </div><br/>
 
                 <div className="card">
                   <div className="card-icon">
@@ -243,7 +243,7 @@ function Service() {
                   <h4 className="card-title">BONJOUR</h4>
                   <p>FIEHHF ZOFH OIHZFPOZEFOPZ OPEFPOZE PF</p>
                   </div>
-                </div>
+                </div><br/>
 
 
               </div>
@@ -264,7 +264,7 @@ function Service() {
                     <p>IFJEOFIJE EOIFJ OZIJEF OIZEJF OIJEZ OIJFO IJ</p>
 
                     </div>
-                      <br/><br/>
+
 
 
               <div className="icon-cards-area">
@@ -275,7 +275,7 @@ function Service() {
                   <h4 class="card-title">BONJOUR</h4>
                   <p>FIEHHF ZOFH OIHZFPOZEFOPZ OPEFPOZE PF</p>
                   </div>
-                </div>
+                </div><br/>
 
                 <div className="card">
                   <div className="card-icon">
@@ -284,7 +284,7 @@ function Service() {
                   <h4 className="card-title">BONJOUR</h4>
                   <p>FIEHHF ZOFH OIHZFPOZEFOPZ OPEFPOZE PF</p>
                   </div>
-                </div>
+                </div><br/>
 
                 <div className="card">
                   <div className="card-icon">
@@ -294,7 +294,7 @@ function Service() {
                   <p>FIEHHF ZOFH OIHZFPOZEFOPZ OPEFPOZE PF</p>
                   </div>
 
-                </div>
+                </div><br/>
 
 
               </div>

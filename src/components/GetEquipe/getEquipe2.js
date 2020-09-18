@@ -83,11 +83,11 @@ function GetEquipe2() {
                                     <Card.Body>
                                     <Card.Title><h3 className="Nom"> {data[i].Nom}</h3><h3 className="Prenom"> {data[i].Prenom}</h3></Card.Title>
                                     <Card.Text>
-        
+
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                    <small className="text-muted">Développeur informatique</small>
                                     </Card.Footer>
                                 </Card>
 
@@ -113,12 +113,12 @@ function GetEquipe2() {
 
     <CardDeck>{ViewContent}</CardDeck>
 
-    
-
-          
 
 
-    
+
+
+
+
 
 
   );

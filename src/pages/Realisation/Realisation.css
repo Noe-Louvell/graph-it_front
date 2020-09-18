@@ -69,6 +69,14 @@ body {
   width: 100%;
 }
 
+.portfolio1 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100%;
+}
+
 .img-text-wrapper {
   position: absolute;
   top: 0;
@@ -116,5 +124,5 @@ body {
 }
 
 .profile-content-wrapper h1 {
-  color: lightseagreen;
+  color: 'lightseagreen';
 }

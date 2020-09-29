@@ -8,7 +8,7 @@ import Table from 'react-bootstrap/Table'
 
 function GetDashboard() {
 
-    
+
 
   const [data, setData] = useState(null);
  function getDashboardFunction() {
@@ -39,57 +39,41 @@ function GetDashboard() {
 
      if (data != null) {
         for (var i = 0; i < data.length; i++) {
-           
+
             ViewContent.push(
-               
-            <tr>
-            <td>{data[i].NomC}</td>
-            
-            </tr>
-          
-          
+
+
+
+
               );
-           
-         
-           
+
+
+
        }
    }
- 
+
    else {
        getDashboardFunction();}
 
-   
+
 
 
   return (
     <div>
 
-<Table striped bordered hover>
-  <thead>
-    <tr>
-      <th>NomC</th>
-      <th>NomSociete</th>
-      <th>MailC</th>
-      <th>TypeC</th>
-    </tr>
-  </thead>
-  <tbody>
-  {ViewContent}
-        
-  </tbody>
-</Table>
-    
-        
-          
-      
+
+
+
+
+
       </div>
 
 
-            
 
-            
 
-            
+
+
+
 
   );
 }

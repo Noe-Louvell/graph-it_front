@@ -27,16 +27,11 @@ function Contact() {
 
     function CheckSend() {
 
+        console.log(errorEmail)
         if (errorEmail != '') {
-            if (errorEmail == 'none') {
-                setDisplayError('veuillez renseigner une adresse email')
-                setErrorEmail('veuillez renseigner une adresse email')
-                return;
-            }
-            else {
-                setDisplayError(errorEmail)
-                return;
-            }
+            setDisplayError('veuillez renseigner une adresse email')
+            setErrorEmail('veuillez renseigner une adresse email')
+            return;
         } else {
             setDisplayError('')
         }
@@ -109,7 +104,44 @@ function Contact() {
 
     }
 
-    function checkEmail(str) {
+    function checkNom(args) {
+        let str = args.currentTarget.value;
+        console.log("checkNom", str)
+        setInpNom(str);
+
+    }
+
+    function checkNomSociete(args) {
+        let str = args.currentTarget.value;
+        console.log("checkNomSociete", str)
+        setInpEntreprise(str);
+
+    }
+
+    function checkPrenom(args) {
+        let str = args.currentTarget.value;
+        console.log("checkPrenom", str)
+        setInpPrenom(str);
+
+    }
+
+    function checkTypeProjet(args) {
+        let str = args.currentTarget.value;
+        console.log("TypeProjet", str)
+        setInpTypeProjet(str);
+
+    }
+
+    function checkMessage(args) {
+        let str = args.currentTarget.value;
+        console.log("checkMessage", str)
+        setInpMessage(str);
+
+    }
+
+    function checkEmail(args) {
+        let str = args.currentTarget.value;
+        console.log("checkEmail", str)
         setInpEmail(str);
         var regex = /[^@ \t\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 
@@ -127,7 +159,8 @@ function Contact() {
 
     }
 
-    function checkNumTel(str) {
+    function checkNumTel(args) {
+        let str = args.currentTarget.value;
         setInpNumTel(str);
         var regex = /^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$/;
 
@@ -155,14 +188,21 @@ function Contact() {
 
     return (
 
-       
+
 
         <div className="formBox">
-        <input className="formImput" type="text" placeholder="Nom*"/>
-        <input className="formImput" type="text" placeholder="Prénom*"/>
-        <input className="formImput" type="text" placeholder="Adresse e-mail*"/>
-        <input className="formImput" type="text" placeholder="Numéro de téléphone*"/>
-        
+            <input className="formImput" type="text" placeholder="Nom*" onChange={checkNom} />
+            <input className="formImput" type="text" placeholder="Prénom*" onChange={checkPrenom} />
+            <input className="formImput" type="text" placeholder="Adresse e-mail*" onChange={checkEmail} />
+            <input className="formImput" type="text" placeholder="Numéro de téléphone*" onChange={checkNumTel} />
+            <input className="formImput" type="text" placeholder="Message*" onChange={checkMessage} />
+            <input className="formImput" type="text" placeholder="Nom de Société*" onChange={checkNomSociete} />
+            <select className="formImput" type="text" placeholder="Type de Projet*" onChange={checkTypeProjet}>
+                <option value="ApplicationMobile">Application Mobile</option>
+                <option value="SiteWeb">Site Web</option>
+            </select>
+            <button onClick={CheckSend}>Envoyer</button>
+            <div>{displayError}</div>
         </div>
 
 

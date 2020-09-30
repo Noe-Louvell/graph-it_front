@@ -24,6 +24,8 @@ import Service from '../src/pages/Service/Service'
 import Contact from '../src/pages/Contact/Contact'
 import Login from '../src/pages/Login/Login'
 import Dashboard from '../src/pages/Dashboard/Dashboard'
+import Clients from '../src/pages/Clients/Clients'
+import Projets from '../src/pages/Projets/Projets'
 
 
 
@@ -69,7 +71,15 @@ function App() {
 
     <Route path="/Dashboard">
     <Dashboard/>
-</Route>
+    </Route>
+    
+    <Route path="/Clients">
+    <Clients/>
+    </Route>
+    
+    <Route path="/Projets">
+    <Projets/>
+    </Route>
 
 
     </Switch>

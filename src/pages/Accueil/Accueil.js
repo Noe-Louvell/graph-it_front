@@ -2,6 +2,7 @@ import React from 'react';
 import './Accueil.css'
 import GetService from '../../components/GetService/getService'
 import GetEquipe2 from '../../components/GetEquipe/getEquipe2'
+import GetRealisation from '../../components/GetRealisation/getRealisation'
 
 
 function Accueil() {

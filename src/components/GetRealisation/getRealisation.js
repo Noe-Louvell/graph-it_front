@@ -26,11 +26,25 @@ import Avatar from '@material-ui/core/Avatar';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Button from '@material-ui/core/Button';
 
 
 function GetRealisation() {
 
+    const [open, setOpen] = React.useState(false);
 
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
   const [data, setData] = useState(null);
 
@@ -38,13 +52,6 @@ function GetRealisation() {
         return { name, calories, fat, carbs, protein };
     }
 
-    const rows = [
-        createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-        createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-        createData('Eclair', 262, 16.0, 24, 6.0),
-        createData('Cupcake', 305, 3.7, 67, 4.3),
-        createData('Gingerbread', 356, 16.0, 49, 3.9),
-    ];
 
     const useStyles = makeStyles({
         table: {
@@ -105,11 +112,36 @@ function GetRealisation() {
                    <td>{data[i].TitreR}</td>
                    <td><Avatar src={{uri:'http://graph-it.cesi.group'+data[i].ImageR.url}}/></td>
                    <td>{data[i].DescriptionR}</td>
-                   <td><IconButton color="inherit"> <VisibilityIcon/>
-                   </IconButton> <IconButton color="inherit"> <EditIcon/> </IconButton>
-                       <IconButton color="inherit"> <DeleteIcon/> </IconButton></td>
-               </tr>
+                   <td> <div>
+                       <IconButton variant="outlined" color="primary" onClick={handleClickOpen}>
+                           <VisibilityIcon/>
+                       </IconButton>
+                       <Dialog
+                           open={open}
+                           onClose={handleClose}
+                           aria-labelledby="alert-dialog-title"
+                           aria-describedby="alert-dialog-description"
+                       >
+                           <DialogTitle id="alert-dialog-title">{"Look"}</DialogTitle>
+                           <DialogContent>
+                               <DialogContentText id="alert-dialog-description">
+                                   ta déja tout les info tu veut pas une loupe non plus
+                               </DialogContentText>
+                           </DialogContent>
+                           <DialogActions>
+                               <Button onClick={handleClose} color="primary">
+                                   Disagree
+                               </Button>
+                               <Button onClick={handleClose} color="primary" autoFocus>
+                                   Agree
+                               </Button>
+                           </DialogActions>
+                       </Dialog>
+                   </div>
+                       
+                    </td>
 
+               </tr>
 
 
 

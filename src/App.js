@@ -24,6 +24,8 @@ import Service from '../src/pages/Service/Service'
 import Contact from '../src/pages/Contact/Contact'
 import Login from '../src/pages/Login/Login'
 import Dashboard from '../src/pages/Dashboard/Dashboard'
+import EquipeD from '../src/pages/Dashboard/EquipeD'
+import ContactD from '../src/pages/Dashboard/ContactD'
 import Clients from '../src/pages/Clients/Clients'
 import Projets from '../src/pages/Projets/Projets'
 
@@ -76,7 +78,15 @@ function App() {
     <Route path="/Clients">
     <Clients/>
     </Route>
-    
+
+    <Route path="/ContactD">
+    <ContactD/>
+    </Route>
+
+    <Route path="/EquipeD">
+    <EquipeD/>
+    </Route>
+
     <Route path="/Projets">
     <Projets/>
     </Route>

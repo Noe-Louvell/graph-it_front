@@ -7,6 +7,7 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
+import GroupWorkIcon from '@material-ui/icons/GroupWork';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -37,6 +38,21 @@ export const mainListItems = (
       </ListItemIcon>
       <NavLink  to="/Clients">Clients</NavLink>
     </ListItem>
+
+    <ListItem  button>
+      <ListItemIcon>
+      <GroupWorkIcon />
+      </ListItemIcon>
+      <NavLink  to="/EquipeD">Equipe</NavLink>
+    </ListItem>
+
+    <ListItem  button>
+      <ListItemIcon>
+      <GroupWorkIcon />
+      </ListItemIcon>
+      <NavLink  to="/ContactD">Contact</NavLink>
+    </ListItem>
+
     <ListItem  button>
       <ListItemIcon>
       <LayersIcon />

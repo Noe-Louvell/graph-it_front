@@ -26,7 +26,7 @@ export const mainListItems = (
 
 
 <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
-  
+
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
@@ -58,7 +58,7 @@ export const mainListItems = (
         <NavLink  to="/Articles">Articles</NavLink>
     </ListItem>
 
-    
+
     </Tab.Container>
   </div>
 );

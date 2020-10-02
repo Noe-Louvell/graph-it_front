@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import './DelArticle.css';
+import './PostArticle.css';
 
 
 
-export default function DelArticle (){
+export default function PostArticle (){
 
     const [data, setData] = useState(null);
 
-    function DelArticleFunction() {
+    function PostArticleFunction() {
 
 
-        fetch('http://graph-it.cesi.group/Articles/:id', {
-            method: 'DELETE',
+        fetch('http://graph-it.cesi.group/Articles', {
+            method: 'POST',
             dataType: 'json',
             headers: {
                 Accept: 'application/json',

@@ -1,9 +1,10 @@
 .hero {
   width: 100%;
-  height: 80vh;
-  background: linear-gradient(135deg, rgba(8, 65, 25, 0.9) 0%, rgba(17, 92, 27, 0.8) 100%), url("../../assets/img/bg-page2.jpg"), center no-repeat;
+  height: 70vh;
+  background: linear-gradient(135deg, rgba(12, 40, 116, 0.9) 0%, rgba(12, 40, 116, 0.9) 100%), url("../../assets/img/bg-page2.jpg"), center no-repeat;
   background-size: cover;
   position: relative;
+  
 }
 
 .hero::before{
@@ -16,6 +17,50 @@
   background: url("../../assets/img/wave-small.png") center no-repeat;
   background-size: cover;
 }
+
+.hero2::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+  background: url("../../assets/img/wave-small2.png") center no-repeat;
+  background-size: cover;
+}
+
+.hero3 {
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(135deg, rgba(25, 50, 124, 1) 0%, rgba(25, 50, 124, 1) 100%),  center no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+.hero3::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  background: url("../../assets/img/wave-small.png") center no-repeat;
+  background-size: cover;
+}
+
+.hero2 {
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), center no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+
+
+
 
 .main-message{
   width: 100%;
@@ -41,7 +86,7 @@
 
 .card {
   
-  box-shadow: 0 5px 10px rgba(0,0,0);
+  box-shadow: 0 5px 10px rgba(12, 40, 116, 0.9);
   border-radius: 20px;  
 }
 
@@ -71,9 +116,9 @@ hr {
   margin-left: center;
   height: 4px;
   margin-bottom: .8rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border: 0;
-  background-color: white;
+  background-color: #19327c;
 }
 
 .position-relative{
@@ -136,7 +181,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 190px;
   margin-left: 300px;
   margin-right: 300px;
   box-shadow: 0 5px 20px rgba(0,0,0);
@@ -214,6 +259,11 @@ hr {
     text-align: center!important;
 }
 
+.titres{
+  font-size: 40px;
+  margin-top: 100px;
+}
+
 .zoneText2{
     flex: 0 0 100%;
     max-width: 100%;
@@ -228,6 +278,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5rem;
 }
+
+h1 {
+  color:#19327c;
+}
+
+
 
 .description{
   margin: 6rem 0;

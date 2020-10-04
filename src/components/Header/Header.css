@@ -22,14 +22,15 @@ a{
   color: black;
   font-size: 105%;
   margin-left: 2%;
+  font-weight: 600;
 }
 
 a:hover{
-  color: #2CDA6C;
+  color: #19327c;
 }
 
 a.active{
-  color: #2CDA6C;
+  color: #19327c;
 }
 .logo{
 

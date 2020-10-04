@@ -7,45 +7,21 @@ function Equipe() {
 
 
 <main>
-
-  <section className="Background HeaderPage">
-    <div className="contenair">
-      <div className="row">
-        <div className="zoneText">
-          <h1> Notre équipe </h1>
-          <h2> Etuidant du cesi </h2>
-        </div>
+<section className="hero">
+    <div className="container">
+      <div className="main-message">
+        <div className="titres"> Notre équipe</div>
+ 
       </div>
     </div>
   </section>
 
 
-  <div className="contenair">
-    <div className="row description">
-      <div className="descriptionText">
-        <h1 className="descriptionTitre">Lorem ipsum as title</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus tempus vestibulum. Donec in lobortis tellus. Sed sed pretium risus, sit amet tempor nisl. Sed sit amet lacus nulla. Nam est nibh, feugiat interdum nibh in, placerat ullamcorper dui. Vivamus nunc turpis, mollis sed hendrerit ut, faucibus vel sem. Pellentesque in pellentesque magna. Aenean laoreet</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus tempus vestibulum. Donec in lobortis tellus. Sed sed pretium risus, sit amet tempor nisl. Sed sit amet lacus nulla. Nam est nibh, feugiat interdum nibh in, placerat ullamcorper dui. Vivamus nunc turpis, mollis sed hendrerit ut, faucibus vel sem. Pellentesque in pellentesque magna. Aenean laoreet</p>
-      </div>
-      <div className="descriptionImg">
-        <div className="logoCesi">
-          <img src="../../assets/img/CESI.png" alt="Logo du CESI"/>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section className="Background HeaderPage SéparationBG">
-    <div className="contenair">
-      <div className="row">
-        <div className="zoneText">
-          <div>
+  <div className="all">
+    
               <GetEquipe/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+   
+  </div>
 
 
 </main>

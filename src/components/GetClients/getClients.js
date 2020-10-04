@@ -44,9 +44,10 @@ function GetClients() {
                
               <tr>
               <td>{data[i].NomC}</td>
+              <td>{data[i].PrenomC}</td>
               <td>{data[i].NomSociete}</td>
               <td>{data[i].MailC}</td>
-              <td>{data[i].TypeC}</td>
+              <td>{data[i].NumeroC}</td>
               </tr>
           
           
@@ -70,9 +71,10 @@ function GetClients() {
   <thead>
     <tr>
       <th>NomC</th>
+      <th>PrenomC</th>
       <th>NomSociete</th>
       <th>MailC</th>
-      <th>TypeC</th>
+      <th>NumeroC</th>
     </tr>
   </thead>
   <tbody>

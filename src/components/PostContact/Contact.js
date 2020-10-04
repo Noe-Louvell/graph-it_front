@@ -188,8 +188,6 @@ function Contact() {
 
     return (
 
-
-
         <div className="formBox">
             <input className="formImput" type="text" placeholder="Nom*" onChange={checkNom} />
             <input className="formImput" type="text" placeholder="Prénom*" onChange={checkPrenom} />
@@ -204,9 +202,6 @@ function Contact() {
             <button onClick={CheckSend}>Envoyer</button>
             <div>{displayError}</div>
         </div>
-
-
-
 
 
     );

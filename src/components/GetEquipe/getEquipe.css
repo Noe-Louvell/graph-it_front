@@ -28,7 +28,7 @@
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 20px rgba(25, 50, 124, 1);
   transition: 0.6s ease-in-out;
 }
 
@@ -68,4 +68,13 @@
   opacity: 1;
   margin-top: -40px;
   transition-delay: 0.3s;
+<<<<<<< HEAD
+=======
+}
+
+.competences {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+>>>>>>> 497219fd926a9f0511510308428d5a69a824fd82
 }

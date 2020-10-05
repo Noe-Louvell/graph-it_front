@@ -7,14 +7,17 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { NavLink  } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import axios from 'axios';
+import { useState } from 'react';
+
 
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(40 ),
+    marginTop: theme.spacing(40),
     marginBottom: theme.spacing(50),
     display: 'flex',
     flexDirection: 'column',
@@ -35,6 +38,38 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn() {
   const classes = useStyles();
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [redirection, setRedirection] = useState(false);
+
+	function handleSubmit(e) {
+		e.preventDefault();
+    console.log(email)
+
+    
+    axios
+      .post('http://graph-it.cesi.group/auth/local', {
+        identifier: email,
+        password: password,
+      })
+      .then(response => {
+        // Handle success.
+        console.log('Well done!');
+        console.log('User profile', response.data.user);
+        console.log('User token', response.data.jwt);
+        setRedirection(true);
+
+        
+        
+      })
+      .catch(error => {
+        // Handle error.
+        console.log('An error occurred:', error);
+      });
+      
+	}
+
+  
   return (
     <Container component="main" maxWidth="s">
       <CssBaseline />
@@ -45,8 +80,9 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Accès à l'espace Administrateur
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <TextField
+
             variant="outlined"
             margin="normal"
             required
@@ -56,6 +92,9 @@ export default function SignIn() {
             name="email"
             autoComplete="email"
             autoFocus
+            value={email}
+            onChange={(args) => setEmail(args.currentTarget.value)}
+
           />
           <TextField
             variant="outlined"
@@ -67,18 +106,20 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
+            value={password}
+            onChange={(args) => setPassword(args.currentTarget.value)}
+            
           />
-          <NavLink  to="/Dashboard">
           <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            >
-            se Connecter
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              
+              >se Connecter
           </Button>
-          </NavLink>
+          { redirection === true && <Redirect to="/Dashboard" />}
         </form>
       </div>
 

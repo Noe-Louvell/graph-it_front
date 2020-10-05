@@ -46,7 +46,7 @@ export default function SignIn() {
 		e.preventDefault();
     console.log(email)
 
-    
+
     axios
       .post('http://graph-it.cesi.group/auth/local', {
         identifier: email,
@@ -59,17 +59,17 @@ export default function SignIn() {
         console.log('User token', response.data.jwt);
         setRedirection(true);
 
-        
-        
+
+
       })
       .catch(error => {
         // Handle error.
         console.log('An error occurred:', error);
       });
-      
+
 	}
 
-  
+
   return (
     <Container component="main" maxWidth="s">
       <CssBaseline />
@@ -108,7 +108,7 @@ export default function SignIn() {
             autoComplete="current-password"
             value={password}
             onChange={(args) => setPassword(args.currentTarget.value)}
-            
+
           />
           <Button
               type="submit"
@@ -116,7 +116,7 @@ export default function SignIn() {
               variant="contained"
               color="primary"
               className={classes.submit}
-              
+
               >se Connecter
           </Button>
           { redirection === true && <Redirect to="/Dashboard" />}

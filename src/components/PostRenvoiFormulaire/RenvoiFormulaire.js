@@ -17,15 +17,15 @@ function RenvoiFormulaire() {
     const [inp_DescProjets, setInpDescProjets] = useState('');
     const [inp_PieceJointe, setInpPieceJointe] = useState('');
 
-    const [errorTypeStructure, seterrorTypeStructure] = useState('none')
-    const [errorRaisonSociale, setErrorRaisonSociale] = useState('none')
-    const [errorNomContact, setErrorNomContact] = useState('none');
-    const [errorVille, setErrorVille] = useState('none')
-    const [errorTel, setErrorTel] = useState('none')
-    const [errorMail, setErrorMail] = useState('none')
-    const [errorSiteWeb, setErrorSiteWeb] = useState('none')
-    const [errorTypeProjets, setErrorTypeProjets] = useState('none')
-    const [errorDescProjets, setErrorDescProjets] = useState('none')
+    const [errorTypeStructure, setErrorTypeStructure] = useState('')
+    const [errorRaisonSociale, setErrorRaisonSociale] = useState('')
+    const [errorNomContact, setErrorNomContact] = useState('');
+    const [errorVille, setErrorVille] = useState('')
+    const [errorTel, setErrorTel] = useState('')
+    const [errorMail, setErrorMail] = useState('')
+    const [errorSiteWeb, setErrorSiteWeb] = useState('')
+    const [errorTypeProjets, setErrorTypeProjets] = useState('')
+    const [errorDescProjets, setErrorDescProjets] = useState('')
 
     const [displayError, setDisplayError] = useState('')
 
@@ -41,20 +41,42 @@ function RenvoiFormulaire() {
         }
 
         if (errorTel != '') {
-            setDisplayError(errorTel)
+            setDisplayError("Veuillez renseigner un numéro de téléphone")
             return;
         } else {
             setDisplayError('')
         }
 
-        if (inp_TypeStructure == '') {
-            setDisplayError('Veuillez renseigner le type de structure')
-            seterrorTypeStructure('Veuillez renseigner le type de structure')
+        if (inp_Mail == '') {
+            setDisplayError('Veuillez renseigner un mail')
+            setErrorMail('Veuillez renseigner un mail')
             return;
         }
         else {
             setDisplayError('')
-            seterrorTypeStructure('')
+            setErrorMail('')
+
+        }
+
+        if (inp_Tel == '') {
+            setDisplayError('Veuillez renseigner le numéro de téléphone')
+            setErrorTel('Veuillez renseigner le numéro de téléphone')
+            return;
+        }
+        else {
+            setDisplayError('')
+            setErrorTel('')
+
+        }
+
+        if (inp_TypeStructure == '') {
+            setDisplayError('Veuillez renseigner le type de structure')
+            setErrorTypeStructure('Veuillez renseigner le type de structure')
+            return;
+        }
+        else {
+            setDisplayError('')
+            setErrorTypeStructure('')
 
         }
 
@@ -236,22 +258,27 @@ function RenvoiFormulaire() {
 
       <div className="formBox">
             <select className="formImput" type="text" placeholder="Type de Structure*" onChange={checkTypeStructure}>
+              <option value="Choisir">Choisir</option>
               <option value="ApplicationMobile">Entreprise</option>
               <option value="SiteWeb">Association</option>
               </select>
+
           <input className="formImput" placeholder="Raison Sociale" onChange={checkRaisonSociale} />
           <input className="formImput" required id="filled-required" label="Required" placeholder="Ville*" variant="filled" onChange={checkVille} />
           <input className="formImput" required id="filled-required" label="Required" placeholder="Nom du Contact*" variant="filled" onChange={checkReferentDuProjet} />
           <input className="formImput" required id="filled-required" label="Required" placeholder="Telephone*" variant="filled" onChange={checkTel} />
           <input className="formImput" required id="filled-required" label="Required" placeholder="E-Mail*" variant="filled" onChange={checkMail} />
           <input className="formImput" placeholder="Site Web*" onChange={checkSiteWeb} />
+
             <select className="formImput" type="text" placeholder="Type de Projet*" onChange={checkTypeDuProjet}>
+                <option value="Choisir">Choisir</option>
                 <option value="Site Web">Site Web</option>
                 <option value="Application Mobile">Application Mobile</option>
                 <option value="Application">Application</option>
                 <option value="Marketing Digital">Marketing Digital</option>
                 <option value="Autre">Autre</option>
             </select>
+
           <input className="formImput" required id="filled-required" label="Required" placeholder="Message*" variant="filled" onChange={checkDescriptionDuProjet} />
             <button className="submitButton" onClick={CheckForm}>Envoyer</button>
             <div>{displayError}</div>

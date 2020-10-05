@@ -91,11 +91,6 @@ function GetEquipe() {
 
                 </div>
 
-<<<<<<< HEAD
-=======
-                
->>>>>>> 9dfdac154040e9539562283b74567f8e4ed9fd48
-
             )
 
 

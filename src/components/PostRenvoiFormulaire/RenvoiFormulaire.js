@@ -29,7 +29,7 @@ function RenvoiFormulaire() {
 
     const [displayError, setDisplayError] = useState('')
 
-    function CheckSend() {
+    function CheckForm() {
 
 
         if (errorMail != '') {
@@ -253,7 +253,7 @@ function RenvoiFormulaire() {
                 <option value="Autre">Autre</option>
             </select>
           <input className="formImput" required id="filled-required" label="Required" placeholder="Message*" variant="filled" onChange={checkDescriptionDuProjet} />
-            <button className="submitButton" onClick={CheckSend}>Envoyer</button>
+            <button className="submitButton" onClick={CheckForm}>Envoyer</button>
             <div>{displayError}</div>
         </div>
 

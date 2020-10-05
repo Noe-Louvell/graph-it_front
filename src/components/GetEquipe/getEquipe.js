@@ -91,11 +91,7 @@ function GetEquipe() {
 
                 </div>
 
-
-    
-
-
-
+                
 
             )
 

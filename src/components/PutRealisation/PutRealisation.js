@@ -3,14 +3,8 @@ import './PutRealisation.css';
 
 
 
-export default function PutRealisation (){
-
-    const [data, setData] = useState(null);
-
-    function PutRealisationFunction() {
-
-
-        fetch('http://graph-it.cesi.group/Realisations/:id', {
+export default function PutRealisation (id){
+        return fetch('http://graph-it.cesi.group/Realisations/'+id, {
             method: 'PUT',
             dataType: 'json',
             headers: {
@@ -21,12 +15,11 @@ export default function PutRealisation (){
             .then((response) => {
                 response.json()
                     .then((responseData) => {
-                        //console.log(responseData)
-                        setData(responseData)
+                        console.log(responseData)
+                        return(responseData)
                     });
             })
             .catch(function (err) {
-                //console.log(err)
+                console.log(err)
             })
     }
-}

@@ -20,22 +20,13 @@ function Service() {
 <main>
 
 
-<section className="Background HeaderPage position-relative">
-    <div className="contenair">
-      <div className="row">
-        <div className="zoneText">
-          <h1>Nos Services</h1>
-
-          <hr/><br/>
-          <h2>Nos compétences </h2>
-
-        </div>
+<section className="hero">
+    <div className="container">
+      <div className="main-message">
+        <div className="titres"> Nos services</div>
+ 
       </div>
-
     </div>
-
-
-
   </section>
 
 

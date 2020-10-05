@@ -28,6 +28,7 @@ import EquipeD from '../src/pages/Dashboard/EquipeD'
 import ContactD from '../src/pages/Dashboard/ContactD'
 import Clients from '../src/pages/Clients/Clients'
 import Projets from '../src/pages/Projets/Projets'
+import RenvoiFormulaire from '../src/pages/RenvoiFormulaire/RenvoiFormulaire'
 
 
 
@@ -43,6 +44,7 @@ function App() {
     <Route exact path="/" component={Accueil}/>
 
     <Switch>
+    
     <Route path="/Accueil">
     <Accueil/>
     </Route>
@@ -89,6 +91,10 @@ function App() {
 
     <Route path="/Projets">
     <Projets/>
+    </Route>
+
+    <Route path="/RenvoiFormulaire">
+    <RenvoiFormulaire />
     </Route>
 
 

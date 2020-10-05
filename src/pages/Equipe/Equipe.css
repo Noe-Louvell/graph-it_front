@@ -13,15 +13,18 @@ section{
   color: #fff;
 }
 
-.Background{
-  background: linear-gradient(135deg, rgba(8, 65, 25, 0.9) 0%, rgba(17, 92, 27, 0.8) 100%), url("../../assets/img/bg-page2.jpg"), no-repeat;
-    background-position: top;
-    background-size: cover;
-    width: 100%;
-    height: 60vh;
+.hero {
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(135deg, rgba(12, 40, 116, 0.9) 0%, rgba(12, 40, 116, 0.9) 100%), url("../../assets/img/bg-page2.jpg"), center no-repeat;
+  background-size: cover;
+  position: relative;
+  
 }
 
-.Background::before{
+
+
+.hero::before{
   content: "";
   position: absolute;
   left: 0;
@@ -38,6 +41,7 @@ section{
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    
 }
 
 .row{

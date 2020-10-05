@@ -2,27 +2,23 @@ import React from 'react';
 import './Contact.css'
 import PostContact from '../../components/PostContact/Contact'
 
+
 function Contact() {
   return (
 
 
-    <main id="Body">
+    <main>
+<section className="hero">
+    <div className="container">
+      <div className="main-message">
+        <div className="titres"> Contact</div>
 
-      <section className="Background HeaderPage">
-        <div className="contenair">
-          <div className="row">
-            <div className="zoneText">
-              <h1> Nous contacter </h1>
-              <h2> Contactez nos étudiants par message ou téléphone </h2>
-            </div>
-          </div>
-        </div>
-
-      </section>
+      </div>
+    </div>
+  </section>
 
 
-
-
+<section className="FormSection">
       <div className="FormContenair">
 
 
@@ -30,6 +26,7 @@ function Contact() {
 
 
       </div>
+</section>
 
 
 

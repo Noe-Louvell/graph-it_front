@@ -3,7 +3,8 @@ import { BiWorld } from 'react-icons/bi';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
-
+import { MdLanguage } from "react-icons/md";
+import './getService.css';
 
 
 
@@ -47,7 +48,7 @@ function GetService() {
             <Card border="light" style={{ width: '18rem'}}>
             
             <Card.Body>
-              <Card.Title>{data[i].Titre}</Card.Title>
+              <Card.Title><div className="titreicone"><div className="icone"><MdLanguage/></div><div><br/>{data[i].Titre}</div></div></Card.Title>
               <Card.Text>
                 {data[i].Description}
               </Card.Text>

@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './PostContact.css'
-
-
 
 function Contact() {
 
@@ -173,44 +170,24 @@ function Contact() {
         }
     }
 
-    function DevisSwitch() {
-        if (demandeDevis === false) {
-            setDemandeDevis(true)
-        }
-        else {
-            setDemandeDevis(false)
-        }
-    }
-
-
-
 
 
     return (
 
 
-
         <div className="formBox">
-            <input className="formImput" type="text" placeholder="Nom*" onChange={checkNom} />
-            <input className="formImput" type="text" placeholder="Prénom*" onChange={checkPrenom} />
-            <input className="formImput" type="text" placeholder="Adresse e-mail*" onChange={checkEmail} />
-            <input className="formImput" type="text" placeholder="Numéro de téléphone*" onChange={checkNumTel} />
-            <input className="formImput" type="text" placeholder="Message*" onChange={checkMessage} />
-            <input className="formImput" type="text" placeholder="Nom de Société*" onChange={checkNomSociete} />
-            <select className="formImput" type="text" placeholder="Type de Projet*" onChange={checkTypeProjet}>
-                <option value="ApplicationMobile">Application Mobile</option>
-                <option value="SiteWeb">Site Web</option>
-            </select>
-            <button onClick={CheckSend}>Envoyer</button>
+            <input className="formImput" required id="filled-required" label="Required" placeholder="Nom*" variant="filled" onChange={checkNom} />
+            <input className="formImput" required id="filled-required" label="Required" placeholder="Prénom*" variant="filled" onChange={checkPrenom} />
+            <input className="formImput" required id="filled-required" label="Required" placeholder="Adresse Email*" variant="filled" onChange={checkEmail} />
+            <input className="formImput" required id="filled-required" label="Required" placeholder="Numéro de téléphone*" variant="filled" onChange={checkNumTel} />
+            <input className="formImput" required id="filled-required" label="Required" placeholder="Nom de la société*" variant="filled" onChange={checkNomSociete} />
+            <input className="formImput" required id="filled-required" label="Required" placeholder="Message*" variant="filled" onChange={checkMessage} />
+            <button className="submitButton" onClick={CheckSend}>Envoyer</button>
             <div>{displayError}</div>
         </div>
 
 
 
-
-
     );
 }
-
-
 export default Contact

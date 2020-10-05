@@ -14,15 +14,14 @@ function Accueil() {
   <section className="hero">
     <div className="container">
       <div className="main-message">
-        <h3> Agence de développement web et mobile </h3>
-        <h1> Graph-it  </h1>
-        <p></p>
+        <div className="titres"> Agence de développement web et mobile <br/>Graph-it </div>
+ 
       </div>
     </div>
   </section>
 
-  <section>
-    <h1>Nos Services</h1><br/><hr/>
+  <section className="hero2">
+    <h1>Nos Services</h1><hr/><br/>
     <div className="container">
    <GetService/>
      </div>
@@ -30,21 +29,11 @@ function Accueil() {
   </section>
 
 
+  <section className="hero3">
+  
 
-  <section className="nosEquipes">
-
-    <div className="contenaire">
-
-      <div className="services2">
-        <h1>Notre équipe pour vos réalisations</h1>
-        <div className="row">
-            <GetEquipe2/>
-        </div>
-
-      </div>
-
-    </div>
-
+    
+    
   </section>
 
 

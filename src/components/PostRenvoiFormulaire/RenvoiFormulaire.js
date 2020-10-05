@@ -259,8 +259,8 @@ function RenvoiFormulaire() {
       <div className="formBox">
             <select className="formImput" type="text" placeholder="Type de Structure*" onChange={checkTypeStructure}>
               <option value="Choisir">Choisir</option>
-              <option value="ApplicationMobile">Entreprise</option>
-              <option value="SiteWeb">Association</option>
+              <option value="entreprise">Entreprise</option>
+              <option value="association">Association</option>
               </select>
 
           <input className="formImput" placeholder="Raison Sociale" onChange={checkRaisonSociale} />
@@ -271,14 +271,14 @@ function RenvoiFormulaire() {
           <input className="formImput" placeholder="Site Web*" onChange={checkSiteWeb} />
 
             <select className="formImput" type="text" placeholder="Type de Projet*" onChange={checkTypeDuProjet}>
-                <option value="Choisir">Choisir</option>
-                <option value="Site Web">Site Web</option>
-                <option value="Application Mobile">Application Mobile</option>
-                <option value="Application">Application</option>
-                <option value="Marketing Digital">Marketing Digital</option>
-                <option value="Autre">Autre</option>
+                <option value="choisir">Choisir</option>
+                <option value="siteWeb">Site Web</option>
+                <option value="applicationMobile">Application Mobile</option>
+                <option value="application">Application</option>
+                <option value="marketingdigital">Marketing Digital</option>
+                <option value="autre">Autre</option>
             </select>
-
+            <input type="file" onChange={checkPieceJointe} />
           <input className="formImput" required id="filled-required" label="Required" placeholder="Message*" variant="filled" onChange={checkDescriptionDuProjet} />
             <button className="submitButton" onClick={CheckForm}>Envoyer</button>
             <div>{displayError}</div>

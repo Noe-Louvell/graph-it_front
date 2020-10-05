@@ -75,23 +75,6 @@ function GetEquipe() {
 
             ViewContent.push(
 
-<<<<<<< HEAD
-<div className="all">
-            
-
-      <div className="card2">
-        <div className="imgBx">
-          <img src={'http://graph-it.cesi.group' + data[i].Photo.url}/>
-        </div>
-        <div className="content2">
-          <h2>{data[i].Nom} {data[i].Prenom}</h2>
-          <p>{data[i].Formation}</p>
-        </div>
-      </div>
-
-
-    </div>
-=======
                 <div className="all">
                             
 
@@ -107,7 +90,7 @@ function GetEquipe() {
                     </div>
 
                 </div>
->>>>>>> 497219fd926a9f0511510308428d5a69a824fd82
+
 
     
 

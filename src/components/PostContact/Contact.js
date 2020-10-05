@@ -10,7 +10,6 @@ function Contact() {
     const [inp_Nom, setInpNom] = useState('')
     const [inp_Prenom, setInpPrenom] = useState('')
     const [inp_Entreprise, setInpEntreprise] = useState('')
-    const [inp_TypeProjet, setInpTypeProjet] = useState('')
     const [inp_Message, setInpMessage] = useState('')
 
     const [errorEmail, setErrorEmail] = useState('none')
@@ -92,7 +91,6 @@ function Contact() {
                 NomSociete: inp_Entreprise,
                 NomC: inp_Nom,
                 PrenomC: inp_Prenom,
-                TypeC: inp_TypeProjet,
                 CommentaireC: inp_Message,
                 MailC: inp_Email,
                 NumeroC: inp_NumTel,
@@ -122,12 +120,6 @@ function Contact() {
 
     }
 
-    function checkTypeProjet(args) {
-        let str = args.currentTarget.value;
-        console.log("TypeProjet", str)
-        setInpTypeProjet(str);
-
-    }
 
     function checkMessage(args) {
         let str = args.currentTarget.value;

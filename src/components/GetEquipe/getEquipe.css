@@ -68,13 +68,10 @@
   opacity: 1;
   margin-top: -40px;
   transition-delay: 0.3s;
-<<<<<<< HEAD
-=======
 }
 
 .competences {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
->>>>>>> 497219fd926a9f0511510308428d5a69a824fd82
 }

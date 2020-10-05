@@ -174,10 +174,7 @@ function Contact() {
 
     return (
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 497219fd926a9f0511510308428d5a69a824fd82
         <div className="formBox">
             <input className="formImput" required id="filled-required" label="Required" placeholder="Nom*" variant="filled" onChange={checkNom} />
             <input className="formImput" required id="filled-required" label="Required" placeholder="Prénom*" variant="filled" onChange={checkPrenom} />
@@ -189,11 +186,6 @@ function Contact() {
             <div>{displayError}</div>
         </div>
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 497219fd926a9f0511510308428d5a69a824fd82
     );
 }
 export default Contact

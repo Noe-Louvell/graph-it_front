@@ -18,8 +18,10 @@ import Footer from './components/Footer/Footer';
 // Import des pages du site
 import Equipe from '../src/pages/Equipe/Equipe'
 import Article from '../src/pages/Article/Article'
+import ArticleD from '../src/pages/Dashboard/ArticleD'
 import Accueil from '../src/pages/Accueil/Accueil'
 import Realisation from '../src/pages/Realisation/Realisation'
+import RealisationD from '../src/pages/Dashboard/RealisationD'
 import Service from '../src/pages/Service/Service'
 import Contact from '../src/pages/Contact/Contact'
 import Login from '../src/pages/Login/Login'
@@ -61,8 +63,16 @@ function App() {
         <Article />
       </Route>
 
+      <Route path="/ArticleD">
+        <ArticleD/>
+      </Route>
+
       <Route path="/Realisation">
         <Realisation />
+      </Route>
+
+      <Route path="/RealisationD">
+        <RealisationD/>
       </Route>
 
       <Route path="/Contact">

@@ -65,13 +65,13 @@ export const mainListItems = (
         <ListItemIcon>
             <FolderIcon />
         </ListItemIcon>
-        <NavLink  to="/Realisation">Realisations</NavLink>
+        <NavLink  to="/RealisationD">Realisations</NavLink>
     </ListItem>
     <ListItem  button>
         <ListItemIcon>
             <DescriptionIcon />
         </ListItemIcon>
-        <NavLink  to="/Articles">Articles</NavLink>
+        <NavLink  to="/ArticleD">Articles</NavLink>
     </ListItem>
 
 

@@ -1,0 +1,127 @@
+{
+    "lanes": [
+      {
+        "id": "PLANNED",
+        "title": "A FAIRE",
+        "label": "20/70",
+        "style": {
+          "width": 280
+        },
+        "cards": [
+          {
+            "id": "AppliMobile",
+            "title": "Application mobile",
+            "label": "6/10/2020",
+            "description": "Correction de bug sur le dashboard",
+            "développeur": "Cody",
+            "Priorité": "Basse"
+
+
+            
+          },
+          {
+            "id": "Register",
+            "title": "inscription pour clients",
+            "label": "6/10/2020",
+            "description": "Création d'un register et une page de connexion pour les clients",
+            "développeur": "Alex",
+            "Priorité": "Haute"
+          },
+          {
+            "id": "CRUD",
+            "title": "CRUD",
+            "label": "6/10/2020",
+            "description": "Création de la fonction modifier",
+            "développeur": "Paul et Pierre",
+            "Priorité": "Moyenne"
+          }
+        ]
+      },
+      {
+        "id": "WIP",
+        "title": "EN COURS",
+        "label": "10/20",
+        "style": {
+          "width": 280
+        },
+        "cards": [
+          {
+            "id": "TRELLO",
+            "title": "TRELLO",
+            "label": "Avant jeudi",
+            "description": "Création d'un système de Trello"
+          }
+        ]
+      },
+      {
+        "id": "FAIT",
+        "title": "FAIT",
+        "label": "0/0",
+        "style": {
+          "width": 280
+        },
+        "cards": [
+            {
+              "id": "AppliMobile",
+              "title": "Application mobile",
+              "label": "15/09/2020",
+              "description": "Création d'une application mobile",
+              "développeur": "Pierre, Paul, Alex",
+              "Priorité": "Moyenne"
+  
+  
+              
+            },
+            {
+              "id": "Site Web",
+              "title": "Site Web",
+              "label": "15/09/2020",
+              "description": "Création d'un site web",
+              "développeur": "Cody",
+              "Priorité": "Moyenne"
+            },
+            {
+              "id": "BDD",
+              "title": "BDD",
+              "label": "début projet",
+              "description": "Création de la basse de données",
+              "développeur": "Cody, Paul, Pierre, Alex",
+              "Priorité": "Moyenne"
+            }
+          ]
+        },
+      {
+        "id": "RESOLUE",
+        "title": "RESOLUE",
+        "style": {
+          "width": 280
+        },
+        "label": "2/5",
+        "cards": [
+          {
+            "id": "bugheader",
+            "title": "Bug Header",
+            "label": "15 mins",
+            "description": "Bug de design sur le header"
+          }
+        ]
+      },
+      {
+        "id": "FERMEE",
+        "title": "FERMEE",
+        "style": {
+          "width": 280
+        },
+        "label": "1/1",
+        "cards": [
+          {
+            "id": "AIRTABLE",
+            "title": "AIRTABLE",
+            "label": "ANNULEE",
+            "description": "Faire un formulaire Airtable"
+          }
+        ]
+      }
+    ]
+  }
+  

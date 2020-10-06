@@ -27,7 +27,12 @@ export const mainListItems = (
 
 
 <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
-
+<ListItem button>
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <NavLink  to="/Trello">Trello</NavLink>
+    </ListItem>
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />

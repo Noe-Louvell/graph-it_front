@@ -26,6 +26,7 @@ import Service from '../src/pages/Service/Service'
 import Contact from '../src/pages/Contact/Contact'
 import Login from '../src/pages/Login/Login'
 import Dashboard from '../src/pages/Dashboard/Dashboard'
+import Trello from '../src/pages/Dashboard/Trello'
 import EquipeD from '../src/pages/Dashboard/EquipeD'
 import ContactD from '../src/pages/Dashboard/ContactD'
 import Clients from '../src/pages/Clients/Clients'
@@ -108,8 +109,12 @@ function App() {
     <RenvoiFormulaire />
     </Route>
 
+    <Route path="/Trello">
+    <Trello />
+    </Route>
+
     <Route path="/Register">
-    /<Register />
+    <Register />
     </Route>
 
 

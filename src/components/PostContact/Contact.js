@@ -172,8 +172,8 @@ function Contact() {
             <input className="formImput" required id="filled-required" label="Required" placeholder="Prénom*" variant="filled" onChange={checkPrenom} />
             <input className="formImput" required id="filled-required" label="Required" placeholder="Adresse Email*" variant="filled" onChange={checkEmail} />
             <input className="formImput" required id="filled-required" label="Required" placeholder="Numéro de téléphone*" variant="filled" onChange={checkNumTel} />
-            <input className="formImput" required id="filled-required" label="Required" placeholder="Nom de la société*" variant="filled" onChange={checkMdp} />
-            <input className="formImput" required id="filled-required" label="Required" placeholder="Message*" variant="filled" onChange={checkMdp2} />
+            <input className="formImput" required id="filled-required" label="Required" placeholder="Nom de la société*" variant="filled" onChange={checkNomSociete} />
+            <input className="formImput" required id="filled-required" label="Required" placeholder="Message*" variant="filled" onChange={checkMessage} />
             <button className="submitButton" onClick={CheckSend}>Envoyer</button>
             <div>{displayError}</div>
         </div>

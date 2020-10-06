@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '/PostRegister.css'
+//import '/PostRegister.css'
 
 function Register() {
 
@@ -9,7 +9,7 @@ function Register() {
     const [EmailRegistered, setEmailRegistered] = useState('');
     const [TelRegistered, setTelRegistered] = useState('');
     const [MdpRegistered, setMdpRegistered] = useState('');
-    const [Mdp2Registered], setMdp2Registered] = useState('');
+    const [Mdp2Registered, setMdp2Registered] = useState('');
 
     const [errorNomR, setErrorNomR] = useState('')
     const [errorPrenomR, setErrorPrenomR] = useState('')
@@ -33,7 +33,7 @@ function Register() {
         }
 
         if (errorTelR != '') {
-          setDisplayError(errorNumTel)
+          setDisplayError(errorTelR)
           return;
         } else {
           setDisplayError('')
@@ -147,7 +147,7 @@ function checkEmailR(args) {
   var regex = /[^@ \t\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 
   if (str == '') {
-      setErrorEmailR("Veuillez renseigner une adresse email")
+      setErrorEmailR("Veuillez renseigner une adresse email ")
   }
   else {
       if (regex.test(str)) {
@@ -174,17 +174,31 @@ function checkTelR(args) {
     }
 }
 
-function checkMdp(args) {
+function checkMdpR(args) {
     let str = args.currentTarget.value;
     setMdpRegistered(str);
-    var regex = /^[@#](?=.{7,13}$)(?=\w{7,13})(?=[^aeiou_]{7,13})(?=.*[A-Z])(?=.*\d)
+    var regex = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/;
 
 
     if (regex.test(str) || str == '') {
         setErrorMdpR('')
     }
     else {
-        setErrorTelR("Veuillez entrer un mot de passe valide")
+        setErrorMdpR("Veuillez entrer un mot de passe valide")
+    }
+}
+
+function checkMdp2R(args) {
+    let str = args.currentTarget.value;
+    setMdp2Registered(str);
+    var regex = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/;
+
+
+    if (regex.test(str) || str == '') {
+        setErrorMdp2R('')
+    }
+    else {
+        setErrorMdp2R("Veuillez entrer un mot de passe valide")
     }
 }
 
@@ -196,8 +210,9 @@ return (
       <input className="formImput" required id="filled-required" label="Required" placeholder="Prénom*" variant="filled" onChange={checkPrenomR} />
       <input className="formImput" required id="filled-required" label="Required" placeholder="Adresse Email*" variant="filled" onChange={checkEmailR} />
       <input className="formImput" required id="filled-required" label="Required" placeholder="Numéro de téléphone*" variant="filled" onChange={checkTelR} />
-      <input className="formImput" required id="filled-required" label="Required" placeholder="Nom de la société*" variant="filled" onChange={checkMdp} />
-      <button className="submitButton" onClick={CheckSend}>Envoyer</button>
+      <input className="formImput" type="password" required id="filled-required" label="Required" placeholder="Mot de passe*" variant="filled" onChange={checkMdpR} />
+      <input className="formImput" type="password" required id="filled-required" label="Required" placeholder="Mot de passe*" variant="filled" onChange={checkMdp2R} />
+      <button className="submitButton" onClick={CheckRegister}>Envoyer</button>
       <div>{displayError}</div>
   </div>
 

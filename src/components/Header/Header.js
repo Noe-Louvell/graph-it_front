@@ -22,9 +22,9 @@ function Header() {
     <NavLink  to="/Realisation">Realisations</NavLink >
     <NavLink  to="/Articles">Articles</NavLink >
     <NavLink  to="/Contact">Nous contacter</NavLink>
-    <NavLink  to="/Login">Espace administrateur</NavLink>
-    
-    
+    <NavLink  to="/Register">Espace Client</NavLink>
+
+
     </Nav>
   </Navbar.Collapse>
 </Navbar>

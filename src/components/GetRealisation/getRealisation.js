@@ -39,11 +39,12 @@ function GetRealisation() {
            //console.log(data[i].Photo.url)
            ViewContent.push(
 
-                    <div className="CardReal">
+                    <div className="CardReal"  >
                         <img src={'http://graph-it.cesi.group' + data[i].ImageR.url} width="450em" height="250em"/>
                     </div>
-                    
-                    
+
+
+
            )
        }
    }
@@ -55,8 +56,9 @@ function GetRealisation() {
 
         <div className="CardReal">
 
+
             {ViewContent}
-        
+
         </div>
 
   );

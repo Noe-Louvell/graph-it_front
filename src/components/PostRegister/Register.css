@@ -1,0 +1,41 @@
+.formBox {
+
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 100px;
+
+}
+
+
+.formImput {
+  width: 41%;
+  margin-bottom: 2%;
+  border: none;
+  border-bottom: groove;
+  outline: none;
+  padding: 1em;
+
+}
+
+.submitButton {
+  height: 4em;
+  width: calc(40% - 300px);
+	box-shadow: 3px 5px 15px 5px #899599;
+	background-color:#0c266b;
+  color: white;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #e1e2ed;
+}
+.submitButton:hover {
+	background-color:#27499b;
+}

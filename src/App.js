@@ -31,6 +31,7 @@ import ContactD from '../src/pages/Dashboard/ContactD'
 import Clients from '../src/pages/Clients/Clients'
 import Projets from '../src/pages/Projets/Projets'
 import RenvoiFormulaire from '../src/pages/RenvoiFormulaire/RenvoiFormulaire'
+import Register from '../src/pages/Register/Register'
 
 
 
@@ -46,7 +47,7 @@ function App() {
     <Route exact path="/" component={Accueil}/>
 
     <Switch>
-    
+
     <Route path="/Accueil">
     <Accueil/>
     </Route>
@@ -86,7 +87,7 @@ function App() {
     <Route path="/Dashboard">
     <Dashboard/>
     </Route>
-    
+
     <Route path="/Clients">
     <Clients/>
     </Route>
@@ -105,6 +106,10 @@ function App() {
 
     <Route path="/RenvoiFormulaire">
     <RenvoiFormulaire />
+    </Route>
+
+    <Route path="/Register">
+    /<Register />
     </Route>
 
 

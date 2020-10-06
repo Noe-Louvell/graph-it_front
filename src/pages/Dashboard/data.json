@@ -103,12 +103,6 @@
             "title": "Bug Header",
             "label": "15 mins",
             "description": "Bug de design sur le header"
-          },
-          {
-            "id": "Completed2",
-            "title": "Maintain Daily Journal",
-            "label": "15 mins",
-            "description": "Use Spreadsheet for now"
           }
         ]
       },

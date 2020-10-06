@@ -99,10 +99,10 @@
         "label": "2/5",
         "cards": [
           {
-            "id": "Completed1",
-            "title": "Practice Meditation",
+            "id": "bugheader",
+            "title": "Bug Header",
             "label": "15 mins",
-            "description": "Use Headspace app"
+            "description": "Bug de design sur le header"
           },
           {
             "id": "Completed2",

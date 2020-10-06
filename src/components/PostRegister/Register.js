@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-//import '/PostRegister.css'
 
 function Register() {
 
@@ -174,32 +173,18 @@ function checkTelR(args) {
     }
 }
 
+
 function checkMdpR(args) {
-    let str = args.currentTarget.value;
-    setMdpRegistered(str);
-    var regex = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/;
-
-
-    if (regex.test(str) || str == '') {
-        setErrorMdpR('')
-    }
-    else {
-        setErrorMdpR("Veuillez entrer un mot de passe valide")
-    }
+  let str = args.currentTarget.value;
+  console.log('checkMdpR', str)
+  setMdpRegistered(str);
 }
 
+
 function checkMdp2R(args) {
-    let str = args.currentTarget.value;
-    setMdp2Registered(str);
-    var regex = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/;
-
-
-    if (regex.test(str) || str == '') {
-        setErrorMdp2R('')
-    }
-    else {
-        setErrorMdp2R("Veuillez entrer un mot de passe valide")
-    }
+  let str = args.currentTarget.value;
+  console.log('checkMdp2R', str)
+  setMdp2Registered(str);
 }
 
 
@@ -211,7 +196,7 @@ return (
       <input className="formImput" required id="filled-required" label="Required" placeholder="Adresse Email*" variant="filled" onChange={checkEmailR} />
       <input className="formImput" required id="filled-required" label="Required" placeholder="Numéro de téléphone*" variant="filled" onChange={checkTelR} />
       <input className="formImput" type="password" required id="filled-required" label="Required" placeholder="Mot de passe*" variant="filled" onChange={checkMdpR} />
-      <input className="formImput" type="password" required id="filled-required" label="Required" placeholder="Mot de passe*" variant="filled" onChange={checkMdp2R} />
+      <input className="formImput" type="password" required id="filled-required" label="Required" placeholder="Confirmation de Mot de passe*" variant="filled" onChange={checkMdp2R} />
       <button className="submitButton" onClick={CheckRegister}>Envoyer</button>
       <div>{displayError}</div>
   </div>

@@ -80,7 +80,7 @@ function GetEquipe() {
 
                     <div className="card2">
                         <div className="imgBx">
-                            <img src={'http://graph-it.cesi.group' + data[i].Photo.url}/>
+                            <img src={'http://graph-it.cesi.group' + data[i].Photo.url} />
                         </div>
                         <div className="content2">
                             <h2>{data[i].Nom} {data[i].Prenom}</h2>
@@ -90,6 +90,8 @@ function GetEquipe() {
                     </div>
 
                 </div>
+
+
 
             )
 

@@ -21,6 +21,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
+    "react-trello": "^2.2.8",
     "reactjs-popup": "^2.0.3",
     "recharts": "^1.8.5",
     "sonnet": "0.0.0"

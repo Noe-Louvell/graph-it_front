@@ -27,7 +27,6 @@ import {
 } from '@material-ui/pickers';
 
 import DelEquipe from '../DelEquipe/DelEquipe';
-
 import UpdateEquipe from '../UpdateEquipe/UpdateEquipe';
 
 function GetEquipeD() {
@@ -87,10 +86,13 @@ function GetEquipeD() {
     console.log(id, updateNom,updatePrenom);
     UpdateEquipe(id, updateNom,updatePrenom);
     handleClickOpenEdit();
+    refreshPage();
   }
 
   const handleCloseEdit = () => {
     setOpenEdit(null);
+    refreshPage();
+
   };
 
   const [rowData, setRowData] = useState(null);

@@ -2,25 +2,10 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Table from 'react-bootstrap/Table'
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import { withStyles, lighten, makeStyles } from '@material-ui/core/styles';
-import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-import TableSortLabel from '@material-ui/core/TableSortLabel';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
-import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
-import FilterListIcon from '@material-ui/icons/FilterList';
 import Avatar from '@material-ui/core/Avatar';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
@@ -33,35 +18,60 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
+import DateFnsUtils from '@date-io/date-fns';
+import Grid from '@material-ui/core/Grid';
 import Fab from '@material-ui/core/Fab';
-import CardMedia from '@material-ui/core/CardMedia';
-import PostRealisation from '../PostRealisation/PostRealisation';
+import {
+  MuiPickersUtilsProvider,
+  
+} from '@material-ui/pickers';
+
 import DelEquipe from '../DelEquipe/DelEquipe';
-import AddEquipe from '../AddEquipe/AddEquipe';
+
 import UpdateEquipe from '../UpdateEquipe/UpdateEquipe';
-
-
 
 function GetEquipeD() {
 
-  const [openView, setOpenView] = React.useState(false);
-  const [openDel, setOpenDel] = React.useState(false);
-  const [openAdd, setOpenAdd] = React.useState(false);
-  const [openEdit, setOpenEdit] = React.useState(false);
+  function refreshPage() {
+    window.location.reload(true);
+  }
 
+  const [selectedDate, setSelectedDate] = React.useState(new Date());
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
+
+  const [openView, setOpenView] = React.useState(null);
+  const [openDel, setOpenDel] = React.useState(null);
+  const [openAdd, setOpenAdd] = React.useState(null);
+  const [openEdit, setOpenEdit] = React.useState(null);
+
+  const [updateNom, setUpdateNom] = React.useState("");
+  const [updatePrenom, setUpdatePrenom] = React.useState("");
 
   const handleClickOpenView = () => {
     setOpenView(true);
   };
+
   const handleCloseView = () => {
     setOpenView(false);
   };
-  const handleClickOpenDel = () => {
-    setOpenDel(true);
+
+  const handleClickOpenDel = (item) => {
+    setOpenDel(item);
   };
+
   const handleCloseDel = () => {
-    setOpenDel(false);
+    setOpenDel(null);
+    refreshPage();
   };
+
+  const handleDelete = (id) => {
+    console.log(id);
+    DelEquipe(id);
+    handleCloseDel();
+  }
 
   const handleClickOpenAdd = () => {
     setOpenAdd(true);
@@ -69,44 +79,27 @@ function GetEquipeD() {
   const handleCloseAdd = () => {
     setOpenAdd(false);
   };
-  const handleClickOpenEdit = () => {
-    setOpenEdit(true);
+  const handleClickOpenEdit = (item) => {
+    setOpenEdit(item);
   };
+
+  const handleUpdate = (id) => {
+    console.log(id, updateNom,updatePrenom);
+    UpdateEquipe(id, updateNom,updatePrenom);
+    handleClickOpenEdit();
+  }
+
   const handleCloseEdit = () => {
-    setOpenEdit(false);
+    setOpenEdit(null);
   };
-
-  const EquipeAdd = (id) => {
-    console.log(id);
-    AddEquipe(id);
-    handleCloseAdd();
-  }
-
-  const EquipeUpdate = (id) => {
-    console.log(id);
-    UpdateEquipe(id);
-    handleCloseEdit();
-  }
-
-  const EquipeDelete = (id) => {
-    console.log(id);
-    DelEquipe(id);
-    handleCloseDel();
-  }
-
-
 
   const [rowData, setRowData] = useState(null);
+
+  
+
+
   const [data, setData] = useState(null);
-
-
-  const useStyles = makeStyles({
-    table: {
-      minWidth: 700,
-    },
-
-  });
-
+  
   const useStyles2 = makeStyles((theme) => ({
     root: {
       '& > *': {
@@ -137,6 +130,8 @@ function GetEquipeD() {
       },
     },
   }))(TableRow);
+
+
 
 
   function getEquipeFunction() {
@@ -172,156 +167,44 @@ function GetEquipeD() {
       ViewContent.push(
         <tr key={"row-" + id}>
           <td>{data[i].Nom}</td>
-
+          
           <td>{data[i].Prenom}</td>
-          <td> 
+          <td> <div>
+            <IconButton variant="outlined" color="primary" onClick={handleClickOpenView}>
+              <VisibilityIcon />
+            </IconButton>
+            <Dialog
+              open={openView}
+              onClose={handleCloseView}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+            >
+              <DialogTitle id="alert-dialog-title">{"Look"}</DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                  Preview du résultat
+                               </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleCloseView} color="primary">
+                  Annuler
+                               </Button>
+                <Button onClick={handleCloseView} color="primary" autoFocus>
+                  Valider
+                               </Button>
+              </DialogActions>
+            </Dialog>
+          </div>
             <div>
-              <Fab onClick={handleClickOpenAdd} color="primary" aria-label="add">
-                <AddIcon />
-              </Fab>
-              <Dialog
-                key={"Adddel-" + id}
-                open={openAdd}
-                onClose={handleCloseAdd}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-              >
-                <DialogTitle id="alert-dialog-title">{"AJout"}</DialogTitle>
-                <DialogContent>
-                  <TextField
-                    autoFocus
-                    margin="dense"
-                    id="Titre"
-                    label="Titre"
-                    type="Title"
-                    fullWidth
-                  />
-                  <input
-                    accept="image/*"
-                    className={classes.input}
-                    id="contained-button-file"
-                    multiple
-                    type="file"
-                  />
-                  <label htmlFor="contained-button-file">
-                    <Button variant="contained" color="primary" component="span">
-                      Upload
-                          </Button>
-                  </label>
-                  <TextField
-                    autoFocus
-                    margin="dense"
-                    id="name"
-                    label="Contenu"
-                    type="Text"
-                    fullWidth
-                  />
-                </DialogContent>
-                <DialogActions>
-                  <Button onClick={handleCloseAdd} color="primary">
-                    Annuler
-                      </Button>
-                  <Button key={"btndel-" + id} onClick={EquipeAdd.bind(this, id)} color="primary" autoFocus>
-                    Valider
-                      </Button>
-                </DialogActions>
-              </Dialog>
-            </div>
-            
-
-
-            <div>
-              <IconButton variant="outlined" color="primary" onClick={handleClickOpenDel}>
+              <IconButton variant="outlined" color="primary" onClick={handleClickOpenDel.bind(this, data[i])}>
                 <DeleteIcon />
               </IconButton>
-              <Dialog
-                key={"dialdel-" + id}
-                open={openDel}
-                onClose={handleCloseDel}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-              >
-                <Button onClick={handleCloseDel} color="primary">
-                  NON
-                               </Button>
-                <Button key={"btndel-" + id} onClick={EquipeDelete.bind(this, id)} color="primary" autoFocus>
-                  OUI
-                               </Button>
-                <div onClick={EquipeDelete.bind(this, id)}></div>
-                <Button onClick={handleCloseDel} color="primary" autoFocus>
-                  retour
-                               </Button>
-              </Dialog>
-              <Dialog
-                key={"dialdel-" + id}
-                open={openDel}
-                onClose={handleCloseDel}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-              >
-                <DialogTitle id="alert-dialog-title">{"Supprimer"}</DialogTitle>
-                <DialogContent>
-                  <DialogContentText id="alert-dialog-description">
-                    Êtes-vous sûr de vouloir supprimer? {id}
-                   </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                  <Button onClick={handleCloseDel} color="primary">
-                    NON
-                                   </Button>
-                  <Button key={"btndel-" + id} onClick={EquipeDelete.bind(this, id)} color="primary" autoFocus>
-                    OUI
-                                   </Button>
-                </DialogActions>
-              </Dialog>
+
             </div>
-
-
             <div>
-              <IconButton variant="outlined" color="primary" onClick={handleClickOpenEdit}>
+              <IconButton variant="outlined" color="primary" onClick={handleClickOpenEdit.bind(this, data[i])}>
                 <EditIcon />
               </IconButton>
-
-              <Dialog
-                open={openEdit}
-                onClose={handleCloseEdit}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-              >
-                <DialogTitle id="alert-dialog-title">{"Modifier"}</DialogTitle>
-                <DialogContent>
-                  <DialogContentText id="alert-dialog-description">
-                    Appliquer les modifications  {id}
-                                   </DialogContentText>
-                  <TextField
-                    rowData={rowData}
-                    autoFocus
-                    margin="dense"
-
-                    label="Nom"
-                    type="Title"
-                    defaultValue=''
-                    fullWidth
-                  />
-                  <TextField
-                    autoFocus
-                    margin="dense"
-
-                    label="Prenom"
-                    type="Text"
-                    defaultValue=''
-                    fullWidth
-                  />
-                </DialogContent>
-                <DialogActions>
-                  <Button onClick={handleCloseEdit} color="primary">
-                    Annuler
-                                   </Button>
-                  <Button key={"btndel-" + id} onClick={EquipeUpdate.bind(this, id)} color="primary" autoFocus>
-                    Valider
-                                   </Button>
-                </DialogActions>
-              </Dialog>
             </div>
 
           </td>
@@ -341,7 +224,132 @@ function GetEquipeD() {
   return (
 
     <div>
+      <div>
+        <Fab onClick={handleClickOpenAdd} color="primary" aria-label="add">
+          <AddIcon />
+        </Fab>
+        <Dialog
+          open={openAdd}
+          onClose={handleCloseAdd}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">{"AJout"}</DialogTitle>
+          <DialogContent>
+            <TextField
+              autoFocus
+              margin="dense"
+              id="Titre"
+              label="Titre"
+              type="Title"
+              fullWidth
+            />
+            <input
+              accept="image/*"
+              className={classes.input}
+              id="contained-button-file"
+              multiple
+              type="file"
+            />
+            <label htmlFor="contained-button-file">
+              <Button variant="contained" color="primary" component="span">
+                Upload
+                          </Button>
+            </label>
+            <TextField
+              autoFocus
+              margin="dense"
+              id="name"
+              label="Sous-titre"
+              type="Text"
+              fullWidth
+            />
+            <MuiPickersUtilsProvider utils={DateFnsUtils}> <Grid container justify="space-around">
 
+            </Grid>
+            </MuiPickersUtilsProvider>
+            <TextField
+              autoFocus
+              margin="dense"
+              id="name"
+              label="Description"
+              type="Text"
+              fullWidth
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseAdd} color="primary">
+              Annuler
+                      </Button>
+            <Button onClick={handleCloseAdd} color="primary" autoFocus>
+              Valider
+                      </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
+      <Dialog
+        key={"dialdel"}
+        open={openDel != null}
+        onClose={handleCloseDel}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Supprimer"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+          Êtes-vous sûr de vouloir supprimer ? {openDel != null ? openDel.id : null}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDel} color="primary">
+            NON
+                  </Button>
+          <Button onClick={handleDelete.bind(this, openDel != null ? openDel.id : null)} color="primary" autoFocus>
+            OUI
+                  </Button>
+        </DialogActions>
+      </Dialog>
+      <Dialog
+        open={openEdit != null}
+        onClose={handleCloseEdit}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Modifier"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Modification d'un equipier 
+                  </DialogContentText>
+          <TextField
+            rowData={rowData}
+            autoFocus
+            margin="dense"
+            id="Titre"
+            label="Nom"
+            type="Title"
+            onChange={(event) => setUpdateNom(event.target.value)}
+            fullWidth
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Prenom"
+            type="Text"
+            onChange={(event) => setUpdatePrenom(event.target.value)}
+            fullWidth
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseEdit} color="primary">
+            Annuler
+                  </Button>
+          <Button onClick={handleUpdate.bind(this, openEdit != null ? openEdit.id : null )} 
+          color="primary" autoFocus>
+            Valider
+                  </Button>
+        </DialogActions>
+      </Dialog>
       <Table striped bordered hover>
         <thead>
 
@@ -355,6 +363,9 @@ function GetEquipeD() {
           {ViewContent}
         </tbody>
       </Table>
+
+
+
 
     </div>
 

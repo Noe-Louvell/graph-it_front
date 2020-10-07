@@ -37,18 +37,18 @@ const useStyles = makeStyles((theme) => ({
 export default function SignInUser() {
   const classes = useStyles();
 
-  const [emailR, setEmailR] = useState("");
-  const [mdpR, setMdpR] = useState("");
+  const [EmailRegisteredR, setEmailRegisteredR] = useState("");
+  const [MdpRegisteredR, setMdpRegisteredR] = useState("");
   const [redirectionR, setRedirectionR] = useState(false);
 
 function handleSubmitUser(e) {
   e.preventDefault();
-  console.log(emailR)
+  console.log(EmailRegisteredR)
 
   axios
     .post('http://graph-it.cesi.group/registers', {
-      identifier: emailR,
-      password: mdpR,
+      identifier: EmailRegisteredR,
+      password: MdpRegisteredR,
     })
     .then(response => {
       // Handle success.
@@ -68,7 +68,7 @@ function handleSubmitUser(e) {
   }
 
   return (
-    <Container className="loginContainer">
+    <Container component="main" maxWidth="s">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -89,8 +89,8 @@ function handleSubmitUser(e) {
             name="email"
             autoComplete="email"
             autoFocus
-            value={emailR}
-            onChange={(args) => setEmailR(args.currentTarget.value)}
+            value={EmailRegisteredR}
+            onChange={(args) => setEmailRegisteredR(args.currentTarget.value)}
 
           />
           <TextField
@@ -103,8 +103,8 @@ function handleSubmitUser(e) {
             type="password"
             id="password"
             autoComplete="current-password"
-            value={mdpR}
-            onChange={(args) => setMdpR(args.currentTarget.value)}
+            value={MdpRegisteredR}
+            onChange={(args) => setMdpRegisteredR(args.currentTarget.value)}
 
           />
           <Button

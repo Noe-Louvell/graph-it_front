@@ -33,7 +33,14 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
+import DateFnsUtils from '@date-io/date-fns';
+import Grid from '@material-ui/core/Grid';
 import Fab from '@material-ui/core/Fab';
+import {
+    MuiPickersUtilsProvider,
+    KeyboardTimePicker,
+    KeyboardDatePicker,
+} from '@material-ui/pickers';
 import CardMedia from '@material-ui/core/CardMedia';
 import PostRealisation from '../PostRealisation/PostRealisation';
 import PutRealisation from '../PutRealisation/PutRealisation';
@@ -41,23 +48,37 @@ import DelRealisation from '../DelRealisation/DelRealisation';
 
 function GetRealisation() {
 
-    const [openView, setOpenView] = React.useState(false);
-    const [openDel, setOpenDel] = React.useState(false);
-    const [openAdd, setOpenAdd] = React.useState(false);
-    const [openEdit, setOpenEdit] = React.useState(false);
+    function refreshPage() {
+        window.location.reload(true);
+    }
+
+    const [selectedDate, setSelectedDate] = React.useState(new Date());
+
+    const handleDateChange = (date) => {
+        setSelectedDate(date);
+    };
+
+    const [openView, setOpenView] = React.useState(null);
+    const [openDel, setOpenDel] = React.useState(null);
+    const [openAdd, setOpenAdd] = React.useState(null);
+    const [openEdit, setOpenEdit] = React.useState(null);
 
 
     const handleClickOpenView = () => {
         setOpenView(true);
     };
+
     const handleCloseView = () => {
         setOpenView(false);
     };
-    const handleClickOpenDel = () => {
-        setOpenDel(true);
+
+    const handleClickOpenDel = (item) => {
+        setOpenDel(item);
     };
+
     const handleCloseDel = () => {
-        setOpenDel(false);
+        setOpenDel(null);
+        refreshPage();
     };
 
     const handleDelete = (id) => {
@@ -72,8 +93,8 @@ function GetRealisation() {
     const handleCloseAdd = () => {
         setOpenAdd(false);
     };
-    const handleClickOpenEdit = () => {
-        setOpenEdit(true);
+    const handleClickOpenEdit = (item) => {
+        setOpenEdit(item);
     };
 
     const handleUpdate = (id) => {
@@ -83,7 +104,7 @@ function GetRealisation() {
     }
 
     const handleCloseEdit = () => {
-        setOpenEdit(false);
+        setOpenEdit(null);
     };
 
     const [rowData, setRowData] = useState(null);
@@ -130,6 +151,10 @@ function GetRealisation() {
             },
         },
     }))(TableRow);
+
+    function checkRealisation(){
+
+    }
 
 
     function getRealisationFunction() {
@@ -196,94 +221,15 @@ function GetRealisation() {
                        </Dialog>
                    </div>
                        <div>
-                           <IconButton variant="outlined" color="primary" onClick={handleClickOpenDel}>
+                           <IconButton variant="outlined" color="primary" onClick={handleClickOpenDel.bind(this, data[i])}>
                                <DeleteIcon/>
                            </IconButton>
-                           <Dialog
-                               key={"dialdel-" + id}
-                               open={openDel}
-                               onClose={handleCloseDel}
-                               aria-labelledby="alert-dialog-title"
-                               aria-describedby="alert-dialog-description"
-                           >
-                               <Button onClick={handleCloseDel} color="primary">
-                                   NON
-                               </Button>
-                               <Button key={"btndel-" + id} onClick={handleDelete.bind(this, id)} color="primary" autoFocus>
-                                   OUI
-                               </Button>
-                           <div onClick={handleDelete.bind(this, id)}></div>
-                               <Button onClick={handleCloseDel} color="primary" autoFocus>
-                                   retour
-                               </Button>
-                           </Dialog>
-                           <Dialog
-                               key={"dialdel-" + id}
-                               open={openDel}
-                               onClose={handleCloseDel}
-                               aria-labelledby="alert-dialog-title"
-                               aria-describedby="alert-dialog-description"
-                           >
-                               <DialogTitle id="alert-dialog-title">{"Supprimer"}</DialogTitle>
-                               <DialogContent>
-                                   <DialogContentText id="alert-dialog-description">
-                                       Est-vous sur de supprimer?
-                                   </DialogContentText>
-                               </DialogContent>
-                               <DialogActions>
-                                   <Button onClick={handleCloseDel} color="primary">
-                                       NON
-                                   </Button>
-                                   <Button key={"btndel-" + id} onClick={handleDelete.bind(this, id)} color="primary" autoFocus>
-                                       OUI
-                                   </Button>
-                               </DialogActions>
-                           </Dialog>
+
                        </div>
                        <div>
-                           <IconButton variant="outlined" color="primary" onClick={handleClickOpenEdit}>
+                           <IconButton variant="outlined" color="primary" onClick={handleClickOpenEdit.bind(this, data[i])}>
                                <EditIcon/>
                            </IconButton>
-                           <Dialog
-                               open={openEdit}
-                               onClose={handleCloseEdit}
-                               aria-labelledby="alert-dialog-title"
-                               aria-describedby="alert-dialog-description"
-                           >
-                               <DialogTitle id="alert-dialog-title">{"Modifier"}</DialogTitle>
-                               <DialogContent>
-                                   <DialogContentText id="alert-dialog-description">
-                                       appliquer les modifications
-                                   </DialogContentText>
-                                   <TextField
-                                       rowData={rowData}
-                                       autoFocus
-                                       margin="dense"
-                                       id="Titre"
-                                       label="Titre"
-                                       type="Title"
-                                       defaultValue= 'ex'
-                                       fullWidth
-                                   />
-                                   <TextField
-                                       autoFocus
-                                       margin="dense"
-                                       id="name"
-                                       label="Contenu"
-                                       type="Text"
-                                       defaultValue={data[i].DescriptionR}
-                                       fullWidth
-                                   />
-                               </DialogContent>
-                               <DialogActions>
-                                   <Button onClick={handleCloseEdit} color="primary">
-                                      Annuler
-                                   </Button>
-                                   <Button onClick={handleCloseEdit} color="primary" autoFocus>
-                                       Valider
-                                   </Button>
-                               </DialogActions>
-                           </Dialog>
                        </div>
                        
                     </td>
@@ -338,7 +284,19 @@ function GetRealisation() {
                           autoFocus
                           margin="dense"
                           id="name"
-                          label="Contenu"
+                          label="Sous-titre"
+                          type="Text"
+                          fullWidth
+                      />
+                      <MuiPickersUtilsProvider utils={DateFnsUtils}> <Grid container justify="space-around">
+
+                      </Grid>
+                      </MuiPickersUtilsProvider>
+                      <TextField
+                          autoFocus
+                          margin="dense"
+                          id="name"
+                          label="Description"
                           type="Text"
                           fullWidth
                       />
@@ -353,6 +311,67 @@ function GetRealisation() {
                   </DialogActions>
               </Dialog>
           </div>
+          <Dialog
+              key={"dialdel"}
+              open={openDel !=null}
+              onClose={handleCloseDel}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+          >
+              <DialogTitle id="alert-dialog-title">{"Supprimer"}</DialogTitle>
+              <DialogContent>
+                  <DialogContentText id="alert-dialog-description">
+                      Est-vous sur de supprimer? {openDel != null ? openDel.id : null }
+                  </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                  <Button onClick={handleCloseDel} color="primary">
+                      NON
+                  </Button>
+                  <Button onClick={handleDelete.bind(this, openDel != null ? openDel.id : null )} color="primary" autoFocus>
+                      OUI
+                  </Button>
+              </DialogActions>
+          </Dialog>
+          <Dialog
+              open={openEdit !=null}
+              onClose={handleCloseEdit}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+          >
+              <DialogTitle id="alert-dialog-title">{"Modifier"}</DialogTitle>
+              <DialogContent>
+                  <DialogContentText id="alert-dialog-description">
+                      appliquer les modifications
+                  </DialogContentText>
+                  <TextField
+                      rowData={rowData}
+                      autoFocus
+                      margin="dense"
+                      id="Titre"
+                      label="Titre"
+                      type="Title"
+                      fullWidth
+                  />
+                  <TextField
+                      autoFocus
+                      margin="dense"
+                      id="name"
+                      label="Contenu"
+                      type="Text"
+                      defaultValue=""
+                      fullWidth
+                  />
+              </DialogContent>
+              <DialogActions>
+                  <Button onClick={handleCloseEdit} color="primary">
+                      Annuler
+                  </Button>
+                  <Button onClick={handleUpdate.bind(this, openDel != null ? openDel.TitreR  : null ? openDel.SubtitleR  : null )} color="primary" autoFocus>
+                      Valider
+                  </Button>
+              </DialogActions>
+          </Dialog>
           <Table striped bordered hover>
               <thead>
 

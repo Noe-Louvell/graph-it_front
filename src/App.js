@@ -33,6 +33,8 @@ import Clients from '../src/pages/Clients/Clients'
 import Projets from '../src/pages/Projets/Projets'
 import RenvoiFormulaire from '../src/pages/RenvoiFormulaire/RenvoiFormulaire'
 import Register from '../src/pages/Register/Register'
+import LoginUser from '../src/pages/LoginUser/LoginUser'
+import EspaceClient from '../src/pages/EspaceClient/EspaceClient'
 
 
 
@@ -113,8 +115,12 @@ function App() {
     <Trello />
     </Route>
 
-    <Route path="/Register">
-    <Register />
+    <Route path="/LoginUser">
+    <LoginUser />
+    </Route>
+
+    <Route path="EspaceClient">
+    <EspaceClient />
     </Route>
 
 

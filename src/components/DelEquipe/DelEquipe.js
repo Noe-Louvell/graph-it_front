@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import './PutRealisation.css';
 
 
-
-export default function PutRealisation (id){
-        return fetch('http://graph-it.cesi.group/Realisations/'+ id, {
-            method: 'PUT',
+export default function DelEquipe (id){
+    return fetch('http://graph-it.cesi.group/Equipes/'+ id, {
+            method: 'DELETE',
             dataType: 'json',
             headers: {
                 Accept: 'application/json',
@@ -22,5 +19,6 @@ export default function PutRealisation (id){
             })
             .catch(function (err) {
                 console.log(err)
+                return(null)
             })
     }

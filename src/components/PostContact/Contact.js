@@ -199,7 +199,7 @@ function Contact() {
             <input className="formImput" required id="filled-required" label="Required" placeholder="Message*" variant="filled" onChange={checkMessage} />
             <button className="submitButton" onClick={() => {
               CheckSend();
-;
+              SendMailNotif();
             }}>Envoyer</button>
             <div>{displayError}</div>
         </div>

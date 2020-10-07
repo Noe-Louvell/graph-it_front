@@ -119,6 +119,10 @@ function App() {
     <LoginUser />
     </Route>
 
+    <Route path="/Register">
+    <Register />
+    </Route>
+
     <Route path="EspaceClient">
     <EspaceClient />
     </Route>

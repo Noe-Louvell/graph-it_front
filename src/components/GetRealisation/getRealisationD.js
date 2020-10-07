@@ -33,6 +33,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
+import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 import Grid from '@material-ui/core/Grid';
 import Fab from '@material-ui/core/Fab';
@@ -87,12 +88,18 @@ function GetRealisation() {
         handleCloseDel();
     }
     
-    const handleClickOpenAdd = () => {
+    const ClickOpenAdd = () => {
         setOpenAdd(true);
     };
-    const handleCloseAdd = () => {
+    const CloseAdd = () => {
         setOpenAdd(false);
     };
+
+    const handleAdd = () => {
+        PostRealisation();
+        CloseAdd();
+    }
+
     const handleClickOpenEdit = (item) => {
         setOpenEdit(item);
     };
@@ -118,8 +125,12 @@ function GetRealisation() {
         table: {
             minWidth: 700,
         },
-
+        root: {
+            maxWidth: 345,
+        },
     });
+
+
 
     const useStyles2 = makeStyles((theme) => ({
         root: {
@@ -132,7 +143,23 @@ function GetRealisation() {
         },
     }));
 
+
+    const useStyles3 = makeStyles((theme) => ({
+        container: {
+            display: 'flex',
+            flexWrap: 'wrap',
+        },
+        textField: {
+            marginLeft: theme.spacing(1),
+            marginRight: theme.spacing(1),
+            width: 200,
+        },
+    }));
+
+
     const classes = useStyles2();
+
+    const classes3 = useStyles3();
 
     const StyledTableCell = withStyles((theme) => ({
         head: {
@@ -190,9 +217,7 @@ function GetRealisation() {
            ViewContent.push(
                <tr key={"row-" + id}>
                    <td>{data[i].TitreR}</td>
-                   <td><CardMedia
-                       image= {{uri:'http://graph-it.cesi.group'+data[i].ImageR.url}}
-                   /></td>
+                   <td><img src={'http://graph-it.cesi.group' + data[i].ImageR.url} width="150em" height="150em"/></td>
                    <td>{data[i].DescriptionR}</td>
                    <td> <div>
                        <IconButton variant="outlined" color="primary" onClick={handleClickOpenView}>
@@ -244,72 +269,15 @@ function GetRealisation() {
    else {
        getRealisationFunction();}
 
-
+console.log(PostRealisation.inp_Titre)
   return (
 
       <div>
           <div>
-              <Fab  onClick={handleClickOpenAdd} color="primary" aria-label="add">
+              <Fab  onClick={ClickOpenAdd} color="primary" aria-label="add">
                   <AddIcon />
               </Fab>
-              <Dialog
-                  open={openAdd}
-                  onClose={handleCloseAdd}
-                  aria-labelledby="alert-dialog-title"
-                  aria-describedby="alert-dialog-description"
-              >
-                  <DialogTitle id="alert-dialog-title">{"AJout"}</DialogTitle>
-                  <DialogContent>
-                      <TextField
-                          autoFocus
-                          margin="dense"
-                          id="Titre"
-                          label="Titre"
-                          type="Title"
-                          fullWidth
-                      />
-                      <input
-                          accept="image/*"
-                          className={classes.input}
-                          id="contained-button-file"
-                          multiple
-                          type="file"
-                      />
-                      <label htmlFor="contained-button-file">
-                          <Button variant="contained" color="primary" component="span">
-                              Upload
-                          </Button>
-                      </label>
-                      <TextField
-                          autoFocus
-                          margin="dense"
-                          id="name"
-                          label="Sous-titre"
-                          type="Text"
-                          fullWidth
-                      />
-                      <MuiPickersUtilsProvider utils={DateFnsUtils}> <Grid container justify="space-around">
-
-                      </Grid>
-                      </MuiPickersUtilsProvider>
-                      <TextField
-                          autoFocus
-                          margin="dense"
-                          id="name"
-                          label="Description"
-                          type="Text"
-                          fullWidth
-                      />
-                  </DialogContent>
-                  <DialogActions>
-                      <Button onClick={handleCloseAdd} color="primary">
-                          Annuler
-                      </Button>
-                      <Button onClick={handleCloseAdd} color="primary" autoFocus>
-                          Valider
-                      </Button>
-                  </DialogActions>
-              </Dialog>
+             <PostRealisation data={openAdd} CloseAdd={CloseAdd} />
           </div>
           <Dialog
               key={"dialdel"}
@@ -351,6 +319,7 @@ function GetRealisation() {
                       id="Titre"
                       label="Titre"
                       type="Title"
+                      defaultValue=""
                       fullWidth
                   />
                   <TextField

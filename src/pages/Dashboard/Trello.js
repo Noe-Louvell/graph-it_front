@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import FunctionsTrello from "./FunctionsTrello";
 import data from "./data.json";
 import "./Trello.css";
 import Board from "react-trello";

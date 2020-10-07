@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './PostContact.css'
 
+
 function Contact() {
 
-    const [demandeDevis, setDemandeDevis] = useState(false);
+
     const [inp_Email, setInpEmail] = useState('')
     const [inp_NumTel, setInpNumTel] = useState('')
     const [inp_Nom, setInpNom] = useState('')
@@ -21,23 +22,25 @@ function Contact() {
 
     const [displayError, setDisplayError] = useState('')
 
+    function SendMailNotif() {
+
+      fetch("http://graph-it.cesi.group/email", {
+          method: "post",
+          headers: {
+              "content-type": "application/json"
+          },
+          body: JSON.stringify({
+            to: 'alexvesier@gmail.com',
+      from: 'NotifFormContact@graphit.com',
+      replyTo: 'your@address.com',
+      subject: 'Demande Contact',
+      text: 'Le formulaire de contact a été complété et envoyé',
+      html: '<h1>Le formulaire de contact a été complété et envoyé</h1>'
+          })
+      }).then((res) => console.log(res.json()))
+    }
+
     function CheckSend() {
-
-        console.log(errorEmail)
-        if (errorEmail != '') {
-            setDisplayError('veuillez renseigner une adresse email')
-            setErrorEmail('veuillez renseigner une adresse email')
-            return;
-        } else {
-            setDisplayError('')
-        }
-
-        if (errorNumTel != '') {
-            setDisplayError(errorNumTel)
-            return;
-        } else {
-            setDisplayError('')
-        }
 
         if (inp_Nom == '') {
             setDisplayError('Veuillez renseigner votre nom')
@@ -60,9 +63,26 @@ function Contact() {
             setErrorPrenom('')
         }
 
-        if (inp_Entreprise == '' & demandeDevis == true) {
-            setDisplayError('Vous devez renseigner votre entreprise pour une demande de devis')
-            setErrorEntreprise('Vous devez renseigner votre entreprise pour une demande de devis')
+        console.log(errorEmail)
+        if (errorEmail != '') {
+            setDisplayError('veuillez renseigner une adresse email')
+            setErrorEmail('veuillez renseigner une adresse email')
+            return;
+        } else {
+            setDisplayError('')
+        }
+
+        if (errorNumTel != '') {
+            setDisplayError('Veuillez renseigner un numéro de téléphone')
+            setErrorNumTel('Veuillez renseigner un numéro de téléphone')
+            return;
+        } else {
+            setDisplayError('')
+        }
+
+        if (inp_Entreprise == '') {
+            setDisplayError('Vous devez renseigner le nom de votre entreprise')
+            setErrorEntreprise('Vous devez renseigner le nom de votre entreprise')
             return;
         }
         else {
@@ -96,6 +116,9 @@ function Contact() {
                 NumeroC: inp_NumTel,
             })
         }).then((res) => console.log(res.json()))
+
+
+
 
     }
 
@@ -174,7 +197,10 @@ function Contact() {
             <input className="formImput" required id="filled-required" label="Required" placeholder="Numéro de téléphone*" variant="filled" onChange={checkNumTel} />
             <input className="formImput" required id="filled-required" label="Required" placeholder="Nom de la société*" variant="filled" onChange={checkNomSociete} />
             <input className="formImput" required id="filled-required" label="Required" placeholder="Message*" variant="filled" onChange={checkMessage} />
-            <button className="submitButton" onClick={CheckSend}>Envoyer</button>
+            <button className="submitButton" onClick={() => {
+              CheckSend();
+;
+            }}>Envoyer</button>
             <div>{displayError}</div>
         </div>
 

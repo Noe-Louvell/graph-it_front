@@ -25,7 +25,9 @@
     "react-trello": "^2.2.8",
     "reactjs-popup": "^2.0.3",
     "recharts": "^1.8.5",
-    "sonnet": "0.0.0"
+    "sendmail": "^1.6.1",
+    "sonnet": "0.0.0",
+    "strapi-provider-email-sendgrid": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

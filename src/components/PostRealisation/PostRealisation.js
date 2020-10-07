@@ -1,33 +1,40 @@
-import React, { useState } from 'react';
+    import React, { useState } from 'react';
 import './PostRealisation.css';
 
 
 
 export default function PostRealisation (){
 
-const [data, setData] = useState(null);
+    const [inp_Titre, setInpTitre] = useState('')
+    const [inp_Date, setInpDate] = useState('')
+    const [inp_image, setInpimage] = useState('')
+    const [inp_TypeReal, setInpTypeReal] = useState('')
+    const [inp_Description, setInpDescription] = useState('')
+    const [inp_Subtitle, setInpSubtitle] = useState('')
 
-function PostRealisationFunction() {
+    const [errorTitre, setErrorTitre] = useState('none')
+    const [errorDate, setErrorDate] = useState('none')
+    const [errorimage, setErrorimage] = useState('none')
+    const [errorTypeReal, setErrorTypeReal] = useState('none')
+    const [errorDescription, setErrorDescription] = useState('none')
+    const [errorSubtitle, setErrorSubtitle] = useState('none')
 
+    const [displayError, setDisplayError] = useState('')
 
-
-    fetch('http://graph-it.cesi.group/Realisations', {
-        method: 'POST',
-        dataType: 'json',
+    fetch("http://graph-it.cesi.group/Realisations", {
+        method: "post",
         headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
+            "content-type": "application/json"
         },
-    })
-        .then((response) => {
-            response.json()
-                .then((responseData) => {
-                    //console.log(responseData)
-                    setData(responseData)
-                });
+        body: JSON.stringify({
+            TitreR: inp_Titre,
+            DateR: inp_Date,
+            ImageR: inp_image,
+            TypeR: inp_TypeReal,
+            DescriptionR: inp_Description,
+            SubtitleR: inp_Subtitle,
         })
-        .catch(function (err) {
-            //console.log(err)
-        })
+    }).then((res) => console.log(res.json()))
 }
-}
+
+
